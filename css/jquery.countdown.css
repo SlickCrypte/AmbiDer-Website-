@@ -1,0 +1,24 @@
+/* jQuery Countdown styles 1.5.11. */
+
+.countdown_show4 .countdown_section {
+	background: #000;
+    border-radius: 167px;
+	border:6px solid #d2ac25;
+    height: 79px;
+    width: 100px;
+	position:relative;
+	text-align:center;
+	float:left;
+	margin-right:20px;
+	color:#fff;
+	font-size:11px;
+	padding-top:20px;
+}
+
+.countdown_amount {
+	margin-bottom:5px;
+	font-family: "TitilliumText2";
+	font-size:24px;
+	font-weight:normal;
+}
+

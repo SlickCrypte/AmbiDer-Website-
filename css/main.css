@@ -1,0 +1,239 @@
+@font-face {
+font-family: "TitilliumText";
+src: url('../fonts/TitilliumText25L004.otf');
+}
+
+@font-face {
+font-family: "TitilliumText2";
+src: url('../fonts/TitilliumText25L005.otf');
+}
+
+/*reset*/
+html, body, div, section, article, aside, header, hgroup, footer, nav, h1, h2, h3, h4, h5, h6, p,a, blockquote, address, time, span, em, strong, img, ol, ul, li, figure, canvas, video, th, td, tr,iframe {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align:baseline;
+	font: inherit;
+	text-decoration:none;
+	list-style:none;
+	font-family: Arial,Helvetica,sans-serif;
+	
+}
+
+a,a:active,a:hover {outline: none;}
+
+/*html5 display rule*/
+address, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, menu, nav, section, summary {
+	display: block;
+}
+
+
+/* Basic style */
+body{
+	background:#000 url(../images/dark_wall.png) repeat ;
+	font: 100% Arial, Helvetica, sans-serif;
+	line-height: 1.5;
+	font-weight:normal;
+	font-style:normal;
+	color:white;
+	position:relative;
+	z-index:100;
+	
+}
+
+#wrapper{
+	width:599px;
+	margin:190px auto 100px auto;
+	background:#000;
+	z-index:1000;
+	position:relative;
+	
+
+}
+
+header{
+	position:relative;
+	color:#fff;
+	margin-bottom:20px;
+	width:599px;
+	text-align:center;
+}
+
+hgroup h1{
+		background: url(../images/topHeader.png) no-repeat scroll 0 0 transparent;
+	    height: 300px;
+	    left: -54px;
+	    position: absolute;
+	    text-align: center;
+	    text-indent: -9999px;
+	    top: -207px;
+	    width: 653px;
+}
+
+hgroup h2{
+	padding-top:106px;
+	font-family: Arial,Verdana;
+	font-size:20px;
+
+}
+
+/* End basic style */
+
+/* Count Down */
+#defaultCountdown { width: 240px; height: 45px; }
+
+#countDown{
+	color:white;
+	width:599px;
+	height:185px;
+	background: url(../images/bg-estimyting.png) no-repeat;
+	padding:16px 0px 0px 45px;
+}
+
+#countDown h3{
+	margin-bottom:20px;
+	margin-left:65px;
+	font-family: "TitilliumText";
+	font-size:16px;
+}
+#days, #hours, #minutes, #seconds{
+		background: #000;
+	    border-radius: 167px;
+		border:6px solid #d2ac25;
+	    height: 99px;
+	    width: 100px;
+		position:relative;
+		text-align:center;
+		float:left;
+		margin-right:20px;
+		color:#fff;
+}
+
+#days h4, #hours h4, #minutes h4, #seconds h4{
+	margin-bottom:5px;
+	margin-top:17px;
+	font-family: "TitilliumText2";
+	font-size:24px;
+	font-weight:normal;
+}
+
+#days h5, #hours h5, #minutes h5, #seconds h5{
+	font-size:11px;
+	font-weight:normal;
+}
+span.border1{
+    background: #d2ac25;
+    height: 8px;
+    left: 152px;
+    position: absolute;
+    top: 267px;
+    width: 28px;
+}
+span.border2{
+    background: #d2ac25;
+    height: 8px;
+    left: 283px;
+    position: absolute;
+    top: 267px;
+    width: 31px;
+}
+span.border3{
+    background: #d2ac25;
+    height: 8px;
+    left: 416px;
+    position: absolute;
+    top: 267px;
+    width: 31px;
+}
+
+/* End Count Down */
+
+
+/* Notifying */
+#notifying{
+	background:#2d2d2d;
+	padding:4px;
+	width:487px;
+	border-radius:3px;
+	margin-left:52px;
+	margin-top:10px;
+}
+
+input{
+color:black;
+		
+} 
+::-webkit-input-placeholder  { color:#000; }
+input:-moz-placeholder { color:#000; }
+
+input[type="text"]{
+	background: none repeat scroll 0 0 #DDDDDD;
+	    border: medium none;
+	    padding: 12px;
+	    width: 362px;
+	
+
+
+}
+
+input:focus{
+	outline-width: 0	
+}
+
+input[type="submit"]::-moz-focus-inner {border:0;}
+input[type="submit"]:focus {background:#d2ac25;}
+
+input[type="submit"]{
+		background:  #d2ac25;
+	    border: medium none;
+	    color: #000;
+	    cursor: pointer;
+	    margin-left: -4px;
+	    padding: 12px;
+	    width: 100px;
+		font-weight:bold;
+
+}
+
+/* End Notifying */
+
+footer{
+	margin-top:25px;
+	background: url(../images/bg-footer.png) no-repeat;
+	height:107px;
+	width:599px;
+}
+
+footer ul {
+    margin-bottom: 10px;
+    margin-left: 183px;
+	padding-top:20px;
+}
+
+footer ul li{
+	display:inline-block;
+	list-style:none;
+	margin-left:5px;
+	height:33px;
+
+}
+
+footer p{
+	text-align:center;
+	font-size:11px;
+}
+
+
+/* Clear float style*/
+.clearfix:before,
+.clearfix:after{
+	content:"";
+	display:table;
+}
+
+.clearfix:after{
+	clear:both;
+}
+/*End clear float style */
+
