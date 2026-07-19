@@ -988,9 +988,9 @@ function toggleTheme() {
 (function () {
 	if (localStorage.getItem('raque_theme') === 'theme-dark') {
 		setTheme('theme-dark');
-		document.getElementById('slider').checked = false;
+		if (document.getElementById('slider')) document.getElementById('slider').checked = false;
 	} else {
 		setTheme('theme-light');
-	  document.getElementById('slider').checked = true;
+		if (document.getElementById('slider')) document.getElementById('slider').checked = true;
 	}
 })();
