@@ -1,0 +1,287 @@
+.rolesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--color-navy-dark);
+}
+
+.rolesTitle {
+  font-size: var(--font-size-title);
+  font-weight: 800;
+  margin-bottom: var(--space-xxs);
+}
+
+.rolesSubtitle {
+  font-size: var(--font-size-label);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.accountCard {
+  background-color: #F9FAFB;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-card);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  color: var(--color-card-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-title);
+  font-weight: 800;
+}
+
+.metaInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
+}
+
+.userName {
+  font-size: var(--font-size-body);
+  font-weight: 800;
+}
+
+.userEmail {
+  font-size: var(--font-size-label);
+  color: var(--color-text-secondary);
+}
+
+.memberSince {
+  font-size: var(--font-size-label);
+  color: var(--color-border-muted);
+  font-weight: 500;
+}
+
+/* ROLES LIST */
+.rolesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.roleCard {
+  background-color: var(--color-card-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-card);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.roleCardActive {
+  border-color: #2563EB;
+  box-shadow: 0 0 0 1px #2563EB;
+}
+
+.roleDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
+  max-width: 70%;
+}
+
+.roleHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.roleTitle {
+  font-size: var(--font-size-body);
+  font-weight: 700;
+}
+
+.badge {
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.activeBadge {
+  background-color: var(--color-info-bg);
+  color: var(--color-info-text);
+}
+
+.enabledBadge {
+  background-color: #DEF7EC;
+  color: #03543F;
+}
+
+.lockedBadge {
+  background-color: var(--color-border-light);
+  color: var(--color-text-secondary);
+}
+
+.roleDesc {
+  font-size: var(--font-size-label);
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+/* BUTTONS */
+.actionBtn {
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: var(--border-radius-card);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid var(--color-border-dark);
+  background-color: var(--color-card-white);
+  color: var(--color-text-dark);
+}
+
+.actionBtn:hover {
+  background-color: #F9FAFB;
+  border-color: var(--color-border-muted);
+}
+
+.primaryBtn {
+  background-color: var(--color-accent-hover);
+  color: var(--color-card-white);
+  border: none;
+  box-shadow: 0 4px 6px -1px rgba(224, 90, 38, 0.2);
+}
+
+.primaryBtn:hover {
+  background-color: var(--color-accent-active);
+}
+
+/* SETUP FORM MODAL */
+.setupModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(17, 24, 39, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(4px);
+}
+
+.modalContent {
+  background-color: var(--color-card-white);
+  border-radius: var(--border-radius-card);
+  width: 100%;
+  max-width: 500px;
+  padding: var(--space-xl);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modalTitle {
+  font-size: var(--font-size-title);
+  font-weight: 800;
+  color: var(--color-navy-dark);
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.input, .textarea {
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--border-radius-card);
+  padding: 10px;
+  font-size: var(--font-size-label);
+  font-family: inherit;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input:focus, .textarea:focus {
+  border-color: var(--color-accent-hover);
+  box-shadow: 0 0 0 3px rgba(224, 90, 38, 0.1);
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: 6px;
+}
+
+.skillBadge {
+  background-color: #EFF6FF;
+  color: #1D4ED8;
+  font-size: var(--font-size-label);
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.removeSkillBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #EF4444;
+  font-weight: 800;
+  padding: 0;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-sm);
+  margin-top: var(--space-xs);
+}
+
+.cancelBtn {
+  background: none;
+  border: 1px solid var(--color-border-dark);
+  padding: 8px 16px;
+  border-radius: var(--border-radius-card);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.cancelBtn:hover {
+  background-color: #F9FAFB;
+}
+
+.submitBtn {
+  background-color: var(--color-accent-hover);
+  color: var(--color-card-white);
+  border: none;
+  padding: 8px 20px;
+  border-radius: var(--border-radius-card);
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(224, 90, 38, 0.2);
+}
+
+.submitBtn:hover {
+  background-color: var(--color-accent-active);
+}

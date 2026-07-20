@@ -1,0 +1,172 @@
+.switcherContainer {
+  position: relative;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.switcherTrigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.switcherTrigger:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.switcherTrigger:active {
+  transform: scale(0.98);
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-navy-dark, var(--color-navy-dark));
+  color: var(--color-card-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-label);
+  font-weight: 800;
+  flex-shrink: 0; /* CRITICAL: Prevent avatar from squishing when active role text is long */
+  overflow: hidden;
+}
+
+.metaInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.userName {
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  color: #ffffff; /* Enhanced contrast against dark navbar background */
+  max-width: 110px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.activeRole {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--color-accent-orange); /* Modern accent color matching brand theme */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.arrowIcon {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: transform 0.2s ease;
+}
+
+.activeMenu .arrowIcon {
+  transform: rotate(180deg);
+}
+
+/* DROPDOWN MENU */
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: var(--space-xs);
+  background-color: var(--color-card-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-card);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  width: 220px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownTitle {
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  color: var(--color-border-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 8px 12px 4px;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 12px;
+  border-radius: var(--border-radius-card);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  text-align: left;
+  border: none;
+  background: none;
+  width: 100%;
+}
+
+.menuItem:hover {
+  background-color: var(--color-border-light);
+}
+
+.menuItemActive {
+  background-color: #EFF6FF;
+}
+
+.menuItemActive:hover {
+  background-color: #DBEAFE;
+}
+
+.roleTitle {
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.menuItemActive .roleTitle {
+  color: #2563EB;
+}
+
+.roleDesc {
+  font-size: var(--font-size-label);
+  color: var(--color-text-secondary);
+  margin-top: 1px;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--color-border-light);
+  margin: 6px 0;
+}
+
+.becomeTitle {
+  font-size: var(--font-size-label);
+  font-weight: 600;
+  color: var(--color-accent-hover);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

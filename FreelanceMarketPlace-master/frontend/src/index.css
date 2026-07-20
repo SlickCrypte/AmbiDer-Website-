@@ -1,0 +1,149 @@
+/* Custom Design Tokens */
+:root {
+  --color-navy-dark: #1B2A41;     /* Header background */
+  --color-navy-darker: #15212F;   /* Footer background */
+  --color-accent-orange: #FF6B35; /* Active tab, buttons, filters */
+  --color-bg-light: #F7F8FA;      /* Page background */
+  --color-card-white: #FFFFFF;    /* Cards, inputs */
+  --color-text-dark: #1B2A41;
+  --color-text-muted: #596573;
+  --color-verified-badge: #1B2A41; /* Dark badge fill */
+
+  /* Typography Ramp */
+  --font-size-display: 28px;
+  --font-size-headline: 22px;
+  --font-size-title: 18px;
+  --font-size-body: 16px;
+  --font-size-label: 13px;
+  
+  /* Neutrals, Borders, and Secondary Typography */
+  --color-border: #E5E7EB;
+  --color-border-light: #F3F4F6;
+  --color-border-dark: #D1D5DB;
+  --color-border-muted: #9CA3AF;
+  --color-text-secondary: #6B7280;
+  --color-text-dark-bg-muted: #8A93A2; /* Muted text for dark background surfaces */
+
+  /* Semantic Roles */
+  --color-success: #10B981;
+  --color-success-bg: rgba(16, 185, 129, 0.1);
+  --color-error: #EF4444;
+  --color-error-bg: rgba(239, 68, 68, 0.1);
+  --color-error-border: #FCA5A5;
+  --color-warning: #FBBF24;
+  --color-info-bg: #E0F2FE;
+  --color-info-text: #0369A1;
+
+  /* Accent states & overlays */
+  --color-accent-hover: #E05A26;
+  --color-accent-active: #C2410C;
+  --color-accent-bg: #FFF0EB;
+  --color-accent-text: #6B2D13;       /* High-contrast orange text for light backgrounds */
+  
+  /* Warmer/softer brand accents */
+  --color-accent-warm-soft: #E78F68;  /* Softer terracotta accent */
+  --color-accent-warm-soft-bg: #FDF1EA; /* Softer warm tint wash */
+  
+  --color-linkedin: #0077B5;
+  --color-linkedin-hover: #005E93;
+
+  /* Spacing Scale (4pt base) */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+  --space-xxl-double: 64px;
+  --space-huge: 96px;
+
+  --border-radius-card: 12px;
+  --border-radius-pill: 20px;
+  --border-radius-input: 6px;
+  --border-radius-button: 6px;
+
+  --shadow-subtle: 0 2px 8px rgba(27, 42, 65, 0.05);
+  --shadow-card: 0 4px 20px rgba(27, 42, 65, 0.08);
+  --shadow-hover: 0 8px 30px rgba(27, 42, 65, 0.12);
+  
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+/* Global Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: var(--font-size-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Base Link Reset */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+/* Inputs Reset */
+input, select, textarea, button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Container for App */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Screen reader only utility class for accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+  font-optical-sizing: auto;
+}
+
+button:active, 
+.navLink:active,
+.btnPrimary:active,
+.btnSecondary:active {
+  transform: scale(0.97);
+  transition: transform 100ms ease-out;
+}
+
+/* Accessibility Focus Indicators */
+:focus-visible {
+  outline: 2px solid var(--color-accent-orange) !important;
+  outline-offset: 2px !important;
+}
+
