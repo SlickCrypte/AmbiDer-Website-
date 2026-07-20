@@ -1,0 +1,393 @@
+/* Premium Design Tokens for FreelanceHub Rating Page */
+.pageWrapper {
+  min-height: 100vh;
+  background-color: #F8F9FA;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--color-navy-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: var(--color-card-white);
+  border-bottom: 1px solid var(--color-border-light);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.logoImage {
+  height: 36px;
+  width: auto;
+}
+
+.logoText {
+  font-size: var(--font-size-title);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.logoTextNavy {
+  color: var(--color-navy-dark);
+}
+
+.logoTextOrange {
+  color: var(--color-accent-hover);
+}
+
+.backToPortalBtn {
+  background: none;
+  border: 1px solid var(--color-border-dark);
+  padding: 8px 16px;
+  border-radius: var(--border-radius-card);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.backToPortalBtn:hover {
+  background-color: var(--color-border-light);
+  border-color: var(--color-border-muted);
+  color: var(--color-text-dark);
+}
+
+/* CONTAINER */
+.mainContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.ratingCard {
+  background-color: var(--color-card-white);
+  border-radius: var(--border-radius-card);
+  border: 1px solid var(--color-border-light);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.headerSection {
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--color-info-bg);
+  color: var(--color-info-text);
+  font-size: var(--font-size-label);
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-sm);
+}
+
+.title {
+  font-size: var(--font-size-headline);
+  font-weight: 800;
+  color: var(--color-navy-dark);
+  margin-bottom: var(--space-xs);
+}
+
+.subtitle {
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* FREELANCER BANNER */
+.freelancerBanner {
+  background-color: #F9FAFB;
+  border: 1px solid var(--color-border-light);
+  padding: 20px;
+  border-radius: var(--border-radius-card);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  color: var(--color-card-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-title);
+  font-weight: 800;
+  border: 2px solid var(--color-card-white);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.freelancerMeta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
+}
+
+.freelancerName {
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  color: var(--color-navy-dark);
+}
+
+.gigTitle {
+  font-size: var(--font-size-label);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+/* FORM GROUPS */
+.ratingForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.formLabel {
+  font-size: var(--font-size-body);
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.starsContainer {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.starBtn {
+  background: none;
+  border: none;
+  font-size: var(--font-size-display);
+  color: var(--color-border);
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.starBtn:hover {
+  transform: scale(1.15);
+}
+
+.starActive {
+  color: var(--color-warning);
+}
+
+.ratingDescriptor {
+  font-size: var(--font-size-label);
+  font-weight: 600;
+  color: var(--color-accent-hover);
+  min-height: 20px;
+}
+
+.textarea {
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--border-radius-card);
+  padding: var(--space-sm);
+  font-size: var(--font-size-body);
+  font-family: inherit;
+  color: inherit;
+  resize: vertical;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.textarea:focus {
+  border-color: var(--color-accent-hover);
+  box-shadow: 0 0 0 3px rgba(224, 90, 38, 0.1);
+}
+
+/* ACTION BUTTONS */
+.actionRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.cancelBtn {
+  background: none;
+  border: 1px solid var(--color-border-dark);
+  padding: 10px 20px;
+  border-radius: var(--border-radius-button);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancelBtn:hover:not(:disabled) {
+  background-color: #F9FAFB;
+  border-color: var(--color-border-muted);
+}
+
+.submitBtn {
+  background-color: var(--color-accent-hover);
+  border: none;
+  padding: 10px 24px;
+  border-radius: var(--border-radius-button);
+  font-weight: 700;
+  color: var(--color-card-white);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(224, 90, 38, 0.2);
+}
+
+.submitBtn:hover:not(:disabled) {
+  background-color: var(--color-accent-active);
+}
+
+.submitBtn:disabled, .cancelBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* STATUS SCREENS (LOADING / ERROR) */
+.loadingWrapper, .errorWrapper {
+  min-height: 100vh;
+  background-color: #F8F9FA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.loadingText {
+  font-size: var(--font-size-title);
+  font-weight: 600;
+  color: var(--color-navy-dark);
+}
+
+.errorCard {
+  background-color: var(--color-card-white);
+  border-radius: var(--border-radius-card);
+  border: 1px solid var(--color-error-border);
+  padding: var(--space-xl);
+  text-align: center;
+  max-width: 450px;
+  box-shadow: 0 4px 20px -2px rgba(239, 68, 68, 0.05);
+}
+
+.errorCard h2 {
+  color: var(--color-error);
+  font-size: var(--font-size-title);
+  font-weight: 800;
+  margin-bottom: var(--space-sm);
+}
+
+.errorCard p {
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+}
+
+.backBtn {
+  background-color: var(--color-navy-dark);
+  color: var(--color-card-white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius-button);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.backBtn:hover {
+  background-color: #0F172A;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: 12px 16px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ratingCard {
+    padding: 28px;
+  }
+
+  .actionRow {
+    flex-direction: column;
+  }
+
+  .cancelBtn, .submitBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 12px;
+    gap: var(--space-xs);
+  }
+
+  .logoText {
+    font-size: var(--font-size-title);
+  }
+
+  .mainContainer {
+    padding: 16px 10px;
+  }
+
+  .ratingCard {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .title {
+    font-size: var(--font-size-title);
+  }
+
+  .starBtn {
+    font-size: var(--font-size-display);
+  }
+
+  .starsContainer {
+    gap: var(--space-xs);
+  }
+
+  .freelancerBanner {
+    padding: 14px;
+    gap: var(--space-sm);
+  }
+
+  .avatar {
+    width: 42px;
+    height: 42px;
+    font-size: var(--font-size-body);
+  }
+
+  .freelancerName {
+    font-size: var(--font-size-body);
+  }
+}

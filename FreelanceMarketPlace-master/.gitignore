@@ -1,0 +1,39 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Agentic / coding tools
+.agents/
+.codex/
+.impeccable/
+
+# Test queries
+*test_query*
+*test-query*
+*query*.sql
+*.test.sql
+*.scratch.sql
+*scratch.sql
+test_queries/
+test-queries/
+test_query/
+scratch/
+test_listings.py
+
+# Data migrations
+*data_migration*
+*data-migration*
+data_migrations/
+data-migrations/
+env
+env (1)
+frontend/env
+frontend/env.example
+frontend/supabase.env
+node_modules/
+frontend/node_modules/
+frontend/dist/
+__pycache__/
+frontend/__pycache__/
