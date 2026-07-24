@@ -2,51 +2,27 @@ import API from "./api";
 
 export const getDashboardStats = async () => {
   const response = await API.get("/dashboard/stats");
+  return response.data;
+};
 
-  const d = response.data;
-
+export const getRecentActivities = async () => {
   return [
     {
-      title: "Total Applications",
-      count: d.total,
-      status: "Applications",
-      route: "/my-applications",
-      icon: null,
+      title: "Application Submitted",
+      company: "AmbiDer Technologies",
+      status: "Applied",
+      date: "Today",
     },
+  ];
+};
+
+export const getUpcomingInterviews = async () => {
+  return [
     {
-      title: "Applied",
-      count: d.applied,
-      status: "Applied Jobs",
-      route: "/my-applications",
-      icon: null,
-    },
-    {
-      title: "Interview",
-      count: d.interview,
-      status: "Interviews",
-      route: "/interviews",
-      icon: null,
-    },
-    {
-      title: "Hired",
-      count: d.hired,
-      status: "Selected",
-      route: "/my-applications",
-      icon: null,
-    },
-    {
-      title: "Rejected",
-      count: d.rejected,
-      status: "Rejected",
-      route: "/my-applications",
-      icon: null,
-    },
-    {
-      title: "Screened",
-      count: d.screened,
-      status: "Shortlisted",
-      route: "/my-applications",
-      icon: null,
+      company: "No Interviews Scheduled",
+      role: "-",
+      date: "-",
+      time: "-",
     },
   ];
 };

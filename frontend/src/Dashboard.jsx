@@ -37,9 +37,9 @@ useEffect(() => {
       const activityData = await getRecentActivities();
       const interviewData = await getUpcomingInterviews();
 
-      setStats(statsData || []);
-      setRecentActivity(activityData || []);
-      setUpcomingInterviews(interviewData || []);
+      setStats(Array.isArray(statsData) ? statsData : []);
+      setRecentActivity(Array.isArray(activityData) ? activityData : []);
+      setUpcomingInterviews(Array.isArray(interviewData) ? interviewData : []);
     } catch (error) {
       console.error(error);
       toast.error("Unable to load dashboard");
