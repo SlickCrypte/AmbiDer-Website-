@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The AmbiDer Brilliance Board</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main Website CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <style>
+.tabb-root {
+  --tabb-white: #FFFFFF;
+  --tabb-cream: #FAF7F1;
+  --tabb-charcoal: #262420;
+  --tabb-slate: #6B6660;
+  --tabb-gold: #C99A3E;
+  --tabb-gold-dark: #A87D2C;
+  --tabb-ember: #B85C2E;
+  --tabb-line: #E9E2D6;
+
+  background-color: var(--tabb-white);
+  color: var(--tabb-charcoal);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tabb-root h1,
+.tabb-root h2,
+.tabb-root h3,
+.tabb-root .tabb-display {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  color: var(--tabb-charcoal);
+  letter-spacing: -0.01em;
+}
+
+.tabb-root section {
+    padding: 2rem 0;
+}
+
+.tabb-root .tabb-alt-bg {
+  background-color: var(--tabb-cream);
+}
+
+/* Facet mark — signature element, a small faceted diamond in gold */
+.tabb-facet {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: conic-gradient(from 45deg, var(--tabb-gold), var(--tabb-ember), var(--tabb-gold-dark), var(--tabb-gold));
+  transform: rotate(45deg);
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(201, 154, 62, 0.35);
+}
+
+.tabb-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--tabb-ember);
+  margin-bottom: 0.85rem;
+}
+
+.tabb-section-title {
+  font-size: clamp(1.75rem, 1.4rem + 1.4vw, 2.6rem);
+  margin-bottom: 1rem;
+}
+
+.tabb-lede {
+  color: var(--tabb-slate);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 62ch;
+}
+
+/* ---------------------------------------------------------
+   1. About TABB
+   --------------------------------------------------------- */
+.tabb-about {
+  text-align: center;
+}
+
+.tabb-about .tabb-lede {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabb-about .tabb-eyebrow {
+  justify-content: center;
+}
+
+.tabb-hairline {
+  width: 64px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--tabb-gold), var(--tabb-ember));
+  border-radius: 2px;
+  margin: 1.25rem auto 1.75rem;
+}
+
+/* ---------------------------------------------------------
+   2. Recognition Categories
+   --------------------------------------------------------- */
+.tabb-category-card {
+  background-color: var(--tabb-white);
+  border: 1px solid var(--tabb-line);
+  border-radius: 16px;
+  padding: 2.25rem 1.75rem;
+  height: 100%;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(38, 36, 32, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tabb-category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(38, 36, 32, 0.09);
+}
+
+.tabb-category-mark {
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 1.25rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--tabb-gold), var(--tabb-ember));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--tabb-white);
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.tabb-category-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+
+.tabb-category-card p {
+  color: var(--tabb-slate);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------
+   3. Featured Recognition
+   --------------------------------------------------------- */
+.tabb-featured-card {
+  background-color: var(--tabb-white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 48px rgba(38, 36, 32, 0.10);
+  border: 1px solid var(--tabb-line);
+}
+
+.tabb-featured-img-wrap{
+    position: relative;
+    height: auto;
+    min-height:250px;
+}
+
+
+.tabb-featured-img-wrap img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.tabb-featured-ribbon {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--tabb-charcoal);
+  color: var(--tabb-white);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+}
+
+.tabb-featured-body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.tabb-featured-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--tabb-gold-dark);
+  margin-bottom: 0.75rem;
+}
+
+.tabb-featured-name {
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  margin-bottom: 0.25rem;
+}
+
+.tabb-featured-role {
+  color: var(--tabb-slate);
+  font-size: 0.98rem;
+  margin-bottom: 1.1rem;
+}
+
+.tabb-featured-role strong {
+  color: var(--tabb-charcoal);
+  font-weight: 600;
+}
+
+.tabb-featured-desc {
+  color: var(--tabb-slate);
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+}
+
+/* ---------------------------------------------------------
+   Buttons
+   --------------------------------------------------------- */
+.tabb-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--tabb-gold), var(--tabb-ember));
+  color: var(--tabb-white) !important;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.6rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.tabb-btn-primary:hover {
+  filter: brightness(1.06);
+  transform: translateY(-2px);
+  color: var(--tabb-white) !important;
+}
+
+.tabb-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--tabb-charcoal);
+  border: 1.5px solid var(--tabb-charcoal);
+  border-radius: 999px;
+  padding: 0.65rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tabb-btn-outline:hover {
+  background: var(--tabb-charcoal);
+  color: var(--tabb-white);
+}
+
+/* ---------------------------------------------------------
+   4. Recognition Gallery
+   --------------------------------------------------------- */
+.tabb-gallery-card {
+  background: var(--tabb-white);
+  border: 1px solid var(--tabb-line);
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(38, 36, 32, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tabb-gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(38, 36, 32, 0.09);
+}
+
+.tabb-gallery-img-wrap {
+  position: relative;
+}
+
+.tabb-gallery-img-wrap img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.tabb-gallery-category {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  background: var(--tabb-white);
+  color: var(--tabb-ember);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(38, 36, 32, 0.12);
+}
+
+.tabb-gallery-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tabb-gallery-name {
+  font-size: 1.1rem;
+  margin-bottom: 0.15rem;
+}
+
+.tabb-gallery-role {
+  color: var(--tabb-slate);
+  font-size: 0.88rem;
+  margin-bottom: 0.9rem;
+}
+
+.tabb-gallery-role strong {
+  color: var(--tabb-charcoal);
+  font-weight: 600;
+}
+
+.tabb-gallery-desc {
+  color: var(--tabb-slate);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.tabb-gallery-body .tabb-btn-outline {
+  align-self: flex-start;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.85rem;
+}
+
+/* ---------------------------------------------------------
+   5. Search & Filter
+   --------------------------------------------------------- */
+.tabb-filter-bar {
+  background: var(--tabb-white);
+  border: 1px solid var(--tabb-line);
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 8px 24px rgba(38, 36, 32, 0.05);
+}
+
+.tabb-filter-bar label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--tabb-slate);
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.tabb-filter-bar .form-control,
+.tabb-filter-bar .form-select {
+  border: 1px solid var(--tabb-line);
+  border-radius: 10px;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.95rem;
+  background-color: var(--tabb-cream);
+}
+
+.tabb-filter-bar .form-control:focus,
+.tabb-filter-bar .form-select:focus {
+  border-color: var(--tabb-gold);
+  box-shadow: 0 0 0 0.2rem rgba(201, 154, 62, 0.18);
+}
+
+/* ---------------------------------------------------------
+   6. Nomination CTA
+   --------------------------------------------------------- */
+.tabb-cta {
+  background: linear-gradient(135deg, #2B2723, #262420);
+  border-radius: 24px;
+  padding: 3.5rem 2rem;
+  text-align: center;
+  color: var(--tabb-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.tabb-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(201, 154, 62, 0.18), transparent 45%),
+              radial-gradient(circle at 80% 80%, rgba(184, 92, 46, 0.16), transparent 45%);
+  pointer-events: none;
+}
+
+.tabb-cta > * {
+  position: relative;
+  z-index: 1;
+}
+
+.tabb-cta h2 {
+  color: var(--tabb-white);
+  font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.3rem);
+  margin-bottom: 0.9rem;
+}
+
+.tabb-cta p {
+  color: #D8D3CA;
+  max-width: 56ch;
+  margin: 0 auto 1.75rem;
+  line-height: 1.7;
+}
+
+/* ---------------------------------------------------------
+   Responsive tweaks
+   --------------------------------------------------------- */
+@media (max-width: 767.98px) {
+  .tabb-root section {
+    padding: 3rem 0;
+  }
+
+ .tabb-featured-img-wrap img{
+    width:100%;
+    height:auto;
+    max-height:450px;
+    object-fit:cover;
+    display:block;
+}
+  .tabb-featured-body {
+    padding: 1.75rem;
+  }
+
+  .tabb-cta {
+    padding: 2.5rem 1.25rem;
+  }
+}</style>
+<div class="tabb-root">
+
+  <!-- =========================================================
+       1. ABOUT TABB
+       ========================================================= -->
+  <section class="tabb-about" aria-labelledby="tabb-about-heading">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p class="tabb-eyebrow"><span class="tabb-facet" aria-hidden="true"></span> AmbiDer Recognition Program</p>
+          <h1 id="tabb-about-heading" class="tabb-section-title">The AmbiDer Brilliance Board (TABB)</h1>
+          <div class="tabb-hairline"></div>
+          <p class="tabb-lede mx-auto">
+            The AmbiDer Brilliance Board (TABB) is AmbiDer's recognition platform dedicated to celebrating exceptional professionals, visionary leaders, and emerging talent across industries. Through recognitions such as <strong>The ICON</strong>, <strong>TrailBlazer</strong>, and <strong>Young Turk</strong>, TABB showcases individuals whose achievements inspire innovation, leadership, and excellence.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       2. RECOGNITION CATEGORIES
+       ========================================================= -->
+  <section class="tabb-categories tabb-alt-bg" aria-labelledby="tabb-categories-heading">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-7">
+          <p class="tabb-eyebrow justify-content-center"><span class="tabb-facet" aria-hidden="true"></span> Categories</p>
+          <h2 id="tabb-categories-heading" class="tabb-section-title">Three Ways We Recognize Brilliance</h2>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <article class="tabb-category-card">
+            <div class="tabb-category-mark" aria-hidden="true">I</div>
+            <h3>The ICON</h3>
+            <p>Recognizes distinguished leaders whose vision, experience, and contributions have created a lasting impact across industries and organizations.</p>
+          </article>
+        </div>
+        <div class="col-12 col-md-4">
+          <article class="tabb-category-card">
+            <div class="tabb-category-mark" aria-hidden="true">T</div>
+            <h3>TrailBlazer</h3>
+            <p>Celebrates professionals who challenge conventional thinking, introduce innovative ideas, and create meaningful business transformation.</p>
+          </article>
+        </div>
+        <div class="col-12 col-md-4">
+          <article class="tabb-category-card">
+            <div class="tabb-category-mark" aria-hidden="true">Y</div>
+            <h3>Young Turk</h3>
+            <p>Honours emerging professionals demonstrating exceptional potential, leadership qualities, and remarkable achievements early in their careers.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       3. FEATURED RECOGNITION
+       ========================================================= -->
+  <section class="tabb-featured" aria-labelledby="tabb-featured-heading">
+    <div class="container">
+      <div class="row justify-content-center mb-5 text-center">
+        <div class="col-lg-7">
+          <p class="tabb-eyebrow justify-content-center"><span class="tabb-facet" aria-hidden="true"></span> Featured Honoree</p>
+          <h2 id="tabb-featured-heading" class="tabb-section-title">Featured Recognition</h2>
+        </div>
+      </div>
+
+      <div class="tabb-featured-card">
+        <div class="row g-0 align-items-stretch">
+          <div class="col-12 col-lg-6">
+            <div class="tabb-featured-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQEJuZNsO_FoGw/feedshare-shrink_800/B56Z4W4533GgAc-/0/1778500476719?e=1785369600&v=beta&t=-BxHgg9Q7acfZTZpf2OC9NWWwl4DVO9LbMBs5RIcqtk" alt="Portrait of featured TABB honoree">
+              <span class="tabb-featured-ribbon"><span class="tabb-facet" aria-hidden="true" style="width:9px;height:9px;"></span> The ICON</span>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="tabb-featured-body">
+              <p class="tabb-featured-title">Recognition Category: The ICON</p>
+              <h3 class="tabb-featured-name">Anita Sharma</h3>
+              <p class="tabb-featured-role">
+                <strong>Designation:</strong> Senior Partner &nbsp;|&nbsp;
+                <strong>Company:</strong> AmbiDer Advisors & Management Consultants LLP
+              </p>
+              <p class="tabb-featured-desc">
+                This recognition celebrates outstanding leadership, professional excellence, and meaningful contributions that have inspired teams, organizations, and the industry.
+              </p>
+              <a href="#" class="tabb-btn-primary">View Recognition</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       5. SEARCH & FILTER (static UI only, no functionality)
+       ========================================================= -->
+  <section class="tabb-search-filter tabb-alt-bg" aria-labelledby="tabb-filter-heading">
+    <div class="container">
+      <h2 id="tabb-filter-heading" class="visually-hidden">Search and filter recognitions</h2>
+      <div class="tabb-filter-bar">
+        <div class="row g-3 align-items-end">
+          <div class="col-12 col-md-5">
+            <label for="tabbSearch">Search honorees</label>
+            <input type="text" id="tabbSearch" class="form-control" placeholder="Search by name, company, or recognition">
+          </div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <label for="tabbCategoryFilter">Recognition Category</label>
+            <select id="tabbCategoryFilter" class="form-select">
+              <option selected>All Categories</option>
+              <option>The ICON</option>
+              <option>TrailBlazer</option>
+              <option>Young Turk</option>
+            </select>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <label for="tabbIndustryFilter">Industry</label>
+            <select id="tabbIndustryFilter" class="form-select">
+              <option selected>All Industries</option>
+              <option>Financial Services</option>
+              <option>Technology</option>
+              <option>Healthcare</option>
+              <option>Manufacturing</option>
+              <option>Public Sector</option>
+            </select>
+          </div>
+          <div class="col-12 col-md-1 d-grid">
+            <button type="button" class="tabb-btn-outline">Go</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       4. RECOGNITION GALLERY
+       ========================================================= -->
+  <section class="tabb-gallery" aria-labelledby="tabb-gallery-heading">
+    <div class="container">
+      <div class="row justify-content-center mb-5 text-center">
+        <div class="col-lg-7">
+          <p class="tabb-eyebrow justify-content-center"><span class="tabb-facet" aria-hidden="true"></span> The Board</p>
+          <h2 id="tabb-gallery-heading" class="tabb-section-title">TABB Honourees</h2>
+        </div>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Gallery Card 1 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQG4szPiLobrfQ/feedshare-shrink_800/B56Z7ya5XOGcAk-/0/1782183597863?e=1785369600&v=beta&t=fRsje5b-iOgvnKfYrx-DB6cH9mlZ9zIK2UjiPPgvSqc" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">TrailBlazer</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Mohit Arora</h3>
+              <p class="tabb-gallery-role"><strong> 𝐀𝐬𝐬𝐨𝐜𝐢𝐚𝐭𝐞 𝐃𝐢𝐫𝐞𝐜𝐭𝐨𝐫 – 𝐇𝐮𝐦𝐚𝐧 𝐂𝐚𝐩𝐢𝐭𝐚𝐥 at "Moglix"</strong> </p>
+              <p class="tabb-gallery-desc">𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫'𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (hashtag#TABB) | Mohit Arora | 𝐓𝐫𝐚𝐢𝐥𝐁𝐥𝐚𝐳𝐞𝐫 𝐨𝐟 𝐭𝐡𝐞 𝐖𝐞𝐞𝐤</p>
+              <a href="mohitarora.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Gallery Card 2 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQGfGi8ZhfTegw/feedshare-shrink_800/B56Z4XBkYQHEAc-/0/1778502747925?e=1785369600&v=beta&t=vNMYapodXtSIY4Z2tRaCpxXnTEkdqTDe9_k2LTDgpts" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">Young Turk</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Divya Chauhan</h3>
+              <p class="tabb-gallery-role"><strong>𝐇𝐑 𝐁𝐮𝐬𝐢𝐧𝐞𝐬𝐬 𝐏𝐚𝐫𝐭𝐧𝐞𝐫 𝐚𝐭 𝐖𝐀𝐈𝐒𝐋 𝐋𝐭𝐝.</strong> · Vireon Advisory</p>
+              <p class="tabb-gallery-desc">We are delighted to begin 𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫’𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 with a 𝐘𝐨𝐮𝐧𝐠 𝐓𝐮𝐫𝐤</p>
+              <a href="divyachauhan.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Gallery Card 3 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D4D22AQGZyOY247Zltg/feedshare-shrink_800/B4DZ4fu5KpG4Ac-/0/1778648847307?e=1785369600&v=beta&t=K7VO7QzyOhi_6eAoYJAU1IKZBnehtrvC-KesbkSxHrY" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">The ICON</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Archana Bhardwaj</h3>
+              <p class="tabb-gallery-role"><strong></strong>Head of HR</strong> · </p>
+              <p class="tabb-gallery-desc">𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫’𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝, is proud to present an 𝐈𝐜𝐨𝐧 </p>
+              <a href="archanabhardwaj.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Gallery Card 4 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQHMXQnM_Wg3Rg/feedshare-shrink_800/B56Z4ajZTSKoAc-/0/1778561947121?e=1785369600&v=beta&t=He-3WDKW13yGncmT7uZWEf6E_nH_OcsBrzHO_jBZZWw" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">TrailBlazer</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Sushma Singh</h3>
+              <p class="tabb-gallery-role"><strong>𝐃𝐞𝐩𝐮𝐭𝐲 𝐆𝐞𝐧𝐞𝐫𝐚𝐥 𝐌𝐚𝐧𝐚𝐠𝐞𝐫- 𝐋𝐞𝐚𝐝 𝐂𝐨𝐄  </strong>𝐒𝐚𝐭𝐢𝐧 𝐂𝐫𝐞𝐝𝐢𝐭𝐜𝐚𝐫𝐞 𝐍𝐞𝐭𝐰𝐨𝐫𝐤 𝐋𝐭𝐝.</p>
+              <p class="tabb-gallery-desc">𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫’𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 proudly presents a 𝐓𝐫𝐚𝐢𝐥𝐁𝐥𝐚𝐳𝐞𝐫 </p>
+              <a href="sushmasingh.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Gallery Card 5 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQHsaMiahQ_hrw/feedshare-shrink_800/B56Z7tCCi2IQAg-/0/1782093195754?e=1785369600&v=beta&t=AUUv6rq606XR0AYTcf6zt0sq5jNgtKu_yYl9Wd5kn-Q" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">Young Turk</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Mamta Verma</h3>
+              <p class="tabb-gallery-role"><strong>Head of HR – RetainPassion, Dubai | UAE</strong> ·</p>
+              <p class="tabb-gallery-desc"> 
+</p>
+              <a href="mamtaverma.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Gallery Card 6 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQFeIx1_wcOoeg/feedshare-shrink_800/B56Z5dmMBQGoAc-/0/1779686752558?e=1785369600&v=beta&t=79KR6YElU9tRS3wAhB_107Atu9-splcvitQHxMiJxK0" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">The ICON</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Ritika Vaid</h3>
+              <p class="tabb-gallery-role"><strong>HR Manager</strong> · Creditpey</p>
+              <p class="tabb-gallery-desc">Another exceptional 𝐘𝐨𝐮𝐧𝐠 𝐓𝐮𝐫𝐤 shines on 𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫’𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (𝐓𝐀𝐁𝐁) </p>
+              <a href="ritikavaid.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+         <!-- Gallery Card 7 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQF94Ob2B0iXiQ/feedshare-shrink_800/B56Z45qXxcIEAg-/0/1779083869551?e=1785369600&v=beta&t=8ZonDo1eH6fz31NgL4qs4bOdGtD83KgcHD2LY0mKEnk" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">Young Turk</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Sudhanshu Shukla</h3>
+              <p class="tabb-gallery-role"><strong>Consultant and progressed to the role of Manager at 𝐃𝐞𝐥𝐨𝐢𝐭𝐭𝐞 </strong> </p>
+              <p class="tabb-gallery-desc">We are proud to feature another Young Turk, Sudhanshu Shukla in today’s edition of 𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫’𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (𝐓𝐀𝐁𝐁)
+</p>
+              <a href="sudhanshushukla.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+
+ <!-- Gallery Card 8-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQEBpj_Z8yXytQ/feedshare-shrink_800/B56Z4.p2CAHUAc-/0/1779167617423?e=1785369600&v=beta&t=0-fion8pP101CowpyMlgI2Z2utf406qolAEHbRZKxFc" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">Trailblazer</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Twinkle Singh</h3>
+              <p class="tabb-gallery-role"><strong>𝐋𝐄𝐀𝐃 𝐓𝐚𝐥𝐞𝐧𝐭 𝐀𝐜𝐪𝐮𝐢𝐬𝐢𝐭𝐢𝐨𝐧 at 𝐂𝐇𝐈𝐂𝐂𝐎 (𝐀𝐫𝐭𝐬𝐚𝐧𝐚 𝐆𝐫𝐨𝐮𝐩)</strong> </p>
+              <p class="tabb-gallery-desc">We are proud to feature another amazing 𝐓𝐫𝐚𝐢𝐥 𝐁𝐥𝐚𝐳𝐞𝐫 today, Twinkle Singh on 𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫’𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (𝐓𝐀𝐁𝐁). </p>
+              <a href="twinklesingh.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+
+ <!-- Gallery Card 9-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQEMiIYnRtYlew/feedshare-shrink_800/B56Z5D3xE.KgAg-/0/1779255153179?e=1785369600&v=beta&t=LSokDl8xPXdkpSbsDRcHWlsx1R0LwloiTuFGMtzIQfE" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">The Icon</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">CA Akshay Sarwarde</h3>
+              <p class="tabb-gallery-role"><strong>Finance Leadership Capacity at DANA ANAND India Private Limited (DAIPL)</strong> </p>
+              <p class="tabb-gallery-desc">We are honoured to feature an 𝐈𝐂𝐎𝐍, a distinguished industry leader and visionary finance professional, CA Akshay Sarwade, on "𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫’𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (𝐓𝐀𝐁𝐁)"</p>
+              <a href="CAakshay.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Gallery Card 10-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQHroRMmIN_aIQ/feedshare-shrink_800/B56Z5i0RXGJIAc-/0/1779774330545?e=1785369600&v=beta&t=FZ8wp1aPj3utJfuK2wgCuzUF_4NcVC51C32j9GP2rKg" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">Trailblazer</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Sneha Sinha</h3>
+              <p class="tabb-gallery-role"><strong>Principal Consultant</strong> · PwC India</p>
+              <p class="tabb-gallery-desc">Another exceptional professional shines on 𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫’𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (𝐓𝐀𝐁𝐁) </p>
+              <a href="snehasinha.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+
+        <!-- Gallery Card 11-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQGLZes7KJh4Eg/feedshare-shrink_800/B56Z5oAXjTHkAc-/0/1779861387725?e=1785369600&v=beta&t=-FxNktfOiH5n7HOAvjraC6FKsXEtxYVmsuBDts64bfA" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">The ICON</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Monurup Borgohain </h3>
+              <p class="tabb-gallery-role"><strong>VICE PRESIDENT – HR & EMPLOYEE RELATIONS</strong> · HSBC</p>
+              <p class="tabb-gallery-desc">Another remarkable leader takes the spotlight on 𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫’𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (hashtag#𝐓𝐀𝐁𝐁)</p>
+              <a href="monurup.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+        
+        <!-- Gallery Card 12-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQHR54K_NNeVnA/feedshare-shrink_800/B56Z6A6jJ9HcAc-/0/1780279292810?e=1785369600&v=beta&t=stde9lwmcAuwH6zpTXkhE86p1ahEphyBLtomeoGeVhw" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">Young Turk</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Harshita Bhatt</h3>
+              <p class="tabb-gallery-role"><strong>Manager – Marketing & Social Media</strong> · Matyaj</p>
+              <p class="tabb-gallery-desc">Another extraordinary talent ascends to 𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫’𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (hashtag#𝐓𝐀𝐁𝐁)</p>
+              <a href="harshitabhatt.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+        
+        <!-- Gallery Card 13-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQFTy--i85P8zw/feedshare-shrink_800/B56Z6G3oP7GgAc-/0/1780379190613?e=1785369600&v=beta&t=FDTuHZnwEBHT7Kk98pJdTVhCn39Hko7O8_reqUYUoXY" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">Trailblazer</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Sandeep Lakshmipathy</h3>
+              <p class="tabb-gallery-role"><strong></strong> </p>
+              <p class="tabb-gallery-desc">Another exceptional professional shines on 𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫’𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (hashtag#𝐓𝐀𝐁𝐁)</p>
+              <a href="sandeepLakshmipathy.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+                <!-- Gallery Card 14-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQFINIazp2PB_Q/feedshare-shrink_800/B56Z6LzN.pHAAc-/0/1780461920536?e=1785369600&v=beta&t=C5ByGW4ikhpQXgPQVzznF6lsz0P3CPiNOMW0_qwPU7o" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">The Icon</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Anita Sahu</h3>
+              <p class="tabb-gallery-role"><strong>Chief Human Resources Officer</strong> </p>
+              <p class="tabb-gallery-desc">Another exceptional professional shines on 𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫'𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (hashtag#TABB)</p>
+              <a href="anitasahu.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+                <!-- Gallery Card 15-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQExPCZWVsRVIg/feedshare-shrink_800/B56Z6lNMkiGoAg-/0/1780888160907?e=1785369600&v=beta&t=KKYfmU35G-fBQcyrHT8v6ZotmBs4YnAGNzZMvesU5Xg" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">Young Turk</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Harsha Mishra</h3>
+              <p class="tabb-gallery-role"><strong>Assistant Manager - HR</strong> </p>
+              <p class="tabb-gallery-desc">The 𝐀𝐦𝐛𝐢𝐃𝐞𝐫'𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (𝐓𝐀𝐁𝐁) proudly features Harsha Mishra as 𝐓𝐡𝐞 𝐘𝐨𝐮𝐧𝐠 𝐓𝐮𝐫𝐤. </p>
+              <a href="harshamishra.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+                <!-- Gallery Card 16-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQEMXKKmhX5QkQ/feedshare-shrink_800/B56Z6qRFoBGsAg-/0/1780973067042?e=1785369600&v=beta&t=2d1S00kR4XypFRrJWybYQ4Rh9erpdf83mTv2DKk5ovg" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">Trailblazer</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Meenakshi M.</h3>
+              <p class="tabb-gallery-role"><strong></strong> </p>
+              <p class="tabb-gallery-desc"> 𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫'𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (hashtag#𝐓𝐀𝐁𝐁)"proudly features Meenakshi M as "𝐓𝐡𝐞 𝐓𝐫𝐚𝐢𝐥𝐁𝐥𝐚𝐳𝐞𝐫 (hashtag#𝐓𝐑𝐁)" of the Week.</p>
+              <a href="meenakshim.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+        
+                <!-- Gallery Card 17-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D4D22AQGSQ5DSC-3l1Q/feedshare-shrink_800/B4DZ6vQQ_KI0Ac-/0/1781056737828?e=1785369600&v=beta&t=qNYeN9C24xd_3OGQ-2DFWl1deOXdKpvL6Ggho99VXSc" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">The Icon</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Gunjan Mishra</h3>
+              <p class="tabb-gallery-role"><strong>People and Culture Leader</strong> </p>
+              <p class="tabb-gallery-desc"> We are proud to feature Gunjan Mishra, 𝐓𝐡𝐞 𝐈𝐂𝐎𝐍 (hashtag#𝐓𝐈𝐂), on 𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫’𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (hashtag#𝐓𝐀𝐁𝐁).</p>
+              <a href="gunjanmishra.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+        
+                <!-- Gallery Card 18-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQHvnBO50EEx8A/feedshare-shrink_800/B56Z7JCwg7IMAc-/0/1781489404221?e=1785369600&v=beta&t=Hg6S1dEQxByEhoCk_srLJG7Og_h26iFpOOHPxi6JNdA" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">Young Turk</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Mohit Kaushik</h3>
+              <p class="tabb-gallery-role"><strong>Senior Manager - HR</strong> at WNS (Capgemini)</p>
+              <p class="tabb-gallery-desc"> 𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫'𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (hashtag#𝐓𝐀𝐁𝐁) is proud to recognise Mohit Kaushik as the 𝐘𝐨𝐮𝐧𝐠 𝐓𝐮𝐫𝐤 (hashtag#𝐘𝐓) of the Week.</p>
+              <a href="mohitkaushik.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+        
+                <!-- Gallery Card 19-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQEhS_MRtkOWvA/feedshare-shrink_800/B56Z7OZgNGGcAc-/0/1781579252789?e=1785369600&v=beta&t=CZP8-T0up_nApPZ5IGSH3iwtC_lSzkDT0WrqHMj1gvk" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">Trailblazer</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Dhriti Mahajan</h3>
+              <p class="tabb-gallery-role"><strong>Senior HRBP</strong> at Proost Beer (Grano69 Beverages)</p>
+              <p class="tabb-gallery-desc"> 𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫'𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (hashtag#𝐓𝐀𝐁𝐁) proudly features Dhriti Mahajan as 𝐓𝐡𝐞 𝐓𝐫𝐚𝐢𝐥𝐁𝐥𝐚𝐳𝐞𝐫 (hashtag#TBR) of the week </p>
+              <a href="dhritimahajan.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+        
+                <!-- Gallery Card 20-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQGGMKSTsf-9HA/feedshare-shrink_800/B56Z83dmWNH4Ak-/0/1783341934245?e=1785369600&v=beta&t=Kn7DjBkMqU7jioyutzDnRgzPjhKZm9CnF621mLCPuNY" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">Young Turk</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Archit Malhotra</h3>
+              <p class="tabb-gallery-role"><strong></strong> </p>
+              <p class="tabb-gallery-desc">
+AmbiDer Advisors & Management Consultants LLP and 𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫'𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (hashtag#TABB) proudly feature Archit Malhotra as our "𝐘𝐨𝐮𝐧𝐠 𝐓𝐮𝐫𝐤 (hashtag#𝐘𝐓) 𝐨𝐟 𝐭𝐡𝐞 𝐖𝐞𝐞𝐤"</p>
+              <a href="architmalhotra.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+
+                <!-- Gallery Card 21-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQFKpmsWTn8NcA/feedshare-shrink_800/B56Z88tEtJGoAc-/0/1783429876817?e=1785369600&v=beta&t=HZ4PXTZYN76_STlpI9_YAuDa_-fdUmi6DfBetRkAyxs" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">Trailblazer</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Gunjan Saini</h3>
+              <p class="tabb-gallery-role"><strong>General Manager HR</strong> at Xebia</p>
+              <p class="tabb-gallery-desc">
+𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫’𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (hashtag#TABB) | Gunjan Saini | 𝐓𝐡𝐞 𝐓𝐫𝐚𝐢𝐥𝐁𝐥𝐚𝐳𝐞𝐫 (hashtag#TRB) 𝐨𝐟 𝐭𝐡𝐞 𝐖𝐞𝐞𝐤</p>
+              <a href="gunjansaini.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+
+
+
+                <!-- Gallery Card 22-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQEasKIgokqgPw/feedshare-shrink_800/B56Z9CEVEKHIAc-/0/1783519859229?e=1785369600&v=beta&t=RCLaXovQbyCDKgb4cthNhPFdlDtBQXKkak-JQpRbWp0" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">The Icon</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Radhakrishna Eale</h3>
+              <p class="tabb-gallery-role"><strong></strong> </p>
+              <p class="tabb-gallery-desc">
+𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫’𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (hashtag#𝐓𝐀𝐁𝐁) | Radhakrishna Eale | 𝐓𝐡𝐞 𝐈𝐂𝐎𝐍 (hashtag#𝐓𝐈𝐂) 𝐨𝐟 𝐭𝐡𝐞 𝐖𝐞𝐞𝐤
+</p>
+              <a href="radhakrishnaeale.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Gallery Card 23-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQGmADFHwTw4kQ/feedshare-shrink_800/B56Z9ZTI28JoAc-/0/1783909617366?e=1785369600&v=beta&t=tD-VI6m4lvSoz4Axo2weq6tszL6XGPvvoSqiT-3pQ70" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">Young Turk</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Chiranjeev Malviya</h3>
+              <p class="tabb-gallery-role"><strong></strong> </p>
+              <p class="tabb-gallery-desc">
+𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫'𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (#𝐓𝐀𝐁𝐁) | Chiranjeev Malviya 
+</p>
+              <a href="chiranjeevmalviya.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+                <!-- Gallery Card 24-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQEy1SmVUFYJ_A/feedshare-shrink_800/B56Z9hAm4hJoAc-/0/1784038977321?e=1785369600&v=beta&t=J8WY9ykg1ix7SdOuvq1ipDErkSp-u1oVaJF13Ud_nxw" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">TrailblazerS</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Sandeep Bist</h3>
+              <p class="tabb-gallery-role"><strong></strong> </p>
+              <p class="tabb-gallery-desc">
+𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫’𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (hashtag#𝐓𝐀𝐁𝐁) | Sandeep Bist | 𝐓𝐡𝐞 𝐓𝐫𝐚𝐢𝐥𝐛𝐥𝐚𝐳𝐞𝐫 (hashtag#TRB) 𝐨𝐟 𝐭𝐡𝐞 𝐖𝐞𝐞𝐤
+
+</p>
+              <a href="sandeepbist.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+          <!-- Gallery Card 25-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQG2-4WO4HdD0A/feedshare-shrink_800/B56Z9pBVdrIUAg-/0/1784173385814?e=1786579200&v=beta&t=Yt5BHMajskOP2aVR3Fu9sDXQgMJ3BT16B3N7uovSzyY" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">The Icon</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Amita Agarwal</h3>
+              <p class="tabb-gallery-role"><strong></strong> </p>
+              <p class="tabb-gallery-desc">
+𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫’𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (hashtag#𝐓𝐀𝐁𝐁) | Amita Agarwal | 𝐓𝐡𝐞 𝐈𝐂𝐎𝐍 (hashtag#𝐓𝐈𝐂) 𝐨𝐟 𝐭𝐡𝐞 𝐖𝐞𝐞𝐤
+
+</p>
+              <a href="amitagarwal.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+          <!-- Gallery Card 26-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQHaMyhrS3lgbQ/feedshare-shrink_800/B56Z99.y0NKUAc-/0/1784525041212?e=1786579200&v=beta&t=Sl4yDtdk6QqV0SS_HLLCVy2gDXBZuRRVl_xM0LmlUo8" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">Young Turk</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Sheryas Srinivasa Rao</h3>
+              <p class="tabb-gallery-role"><strong></strong> </p>
+              <p class="tabb-gallery-desc">
+𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫’𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (hashtag#𝐓𝐀𝐁𝐁) | Sheryas Srinivasa Rao | 𝐘𝐨𝐮𝐧𝐠 Turk (hashtag#YT) 𝐨𝐟 𝐭𝐡𝐞 𝐖𝐞𝐞𝐤
+
+</p>
+              <a href="sheryasrao.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+          <!-- Gallery Card 27-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQHSt5dkD0czVw/feedshare-image-high-res/B56Z.C0z3hKEAU-/0/1784606310132?e=1786579200&v=beta&t=jwe45gYicw_8CmkYc75GTo8bwZTY8vEdY62QJ1fl7e4" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">Trailblazer</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Akshay Rakshit</h3>
+              <p class="tabb-gallery-role"><strong></strong> </p>
+              <p class="tabb-gallery-desc">
+𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫’𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (hashtag#𝐓𝐀𝐁𝐁) | Akshay Rakshit | 𝐓𝐡𝐞 𝐓𝐫𝐚𝐢𝐥𝐛𝐥𝐚𝐳𝐞𝐫 (hashtag#TRB) 𝐨𝐟 𝐭𝐡𝐞 𝐖𝐞𝐞𝐤
+
+</p>
+              <a href="akshayrakshit.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+          <!-- Gallery Card 28-->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="tabb-gallery-card">
+            <div class="tabb-gallery-img-wrap">
+              <img src="https://media.licdn.com/dms/image/v2/D5622AQGFgpE8ccUfiA/feedshare-shrink_800/B56Z.IMCH0IoAc-/0/1784696283862?e=1786579200&v=beta&t=dQR4z72Q2jfAa5clISk6BfqUWnXyhUYdxosbjYgAlaM" alt="Portrait of honoree">
+              <span class="tabb-gallery-category">The ICON (TIC) of the Week</span>
+            </div>
+            <div class="tabb-gallery-body">
+              <h3 class="tabb-gallery-name">Anisha Jayarajan</h3>
+              <p class="tabb-gallery-role"><strong></strong> </p>
+              <p class="tabb-gallery-desc">
+𝐓𝐡𝐞 𝐀𝐦𝐛𝐢𝐃𝐞𝐫’𝐬 𝐁𝐫𝐢𝐥𝐥𝐢𝐚𝐧𝐜𝐞 𝐁𝐨𝐚𝐫𝐝 (hashtag#𝐓𝐀𝐁𝐁) | Anisha Jayarajan | 𝐓𝐡𝐞 Icon (hashtag#TIC) 𝐨𝐟 𝐭𝐡𝐞 𝐖𝐞𝐞𝐤
+
+</p>
+              <a href="anishajayarajan.html" class="tabb-btn-outline">View Recognition</a>
+            </div>
+          </article>
+        </div>
+
+
+
+      </div>
+    </div>
+    
+
+    
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       6. NOMINATION CALL-TO-ACTION
+       ========================================================= -->
+  <section class="tabb-nomination">
+    <div class="container">
+      <div class="tabb-cta">
+        <h2>Celebrate Excellence with TABB</h2>
+        <p>
+          Nominate a colleague, client, or leader whose work embodies excellence,
+          innovation, or standout early-career promise. Nominations are reviewed
+          each quarter by the TABB selection committee.
+        </p>
+        <a href="#" class="tabb-btn-primary">Submit a Nomination</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
