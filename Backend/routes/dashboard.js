@@ -10,7 +10,7 @@ const { protect, authorize } = require('../middleware/authMiddleware');
 const { getStats, getAnalytics } = require('../controllers/dashboardController');
 
 // Full statistics
-router.get('/stats', protect, authorize('admin', 'recruiter'), getStats);
+router.get('/stats', protect, authorize('admin', 'recruiter', 'candidate'), getStats);
 
 // Recruiter analytics (NEW)
 router.get('/analytics', protect, authorize('admin', 'recruiter'), getAnalytics);
