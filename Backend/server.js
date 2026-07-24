@@ -56,12 +56,10 @@ app.use((err, req, res, next) => {
 
 const frontendBuildPath = path.join(__dirname, '../frontend/dist');
 app.use(express.static(frontendBuildPath));
-
-app.get('*', (req, res, next) => {
+app.use((req, res, next) => {
   if (req.path.startsWith('/api')) return next();
   res.sendFile(path.join(frontendBuildPath, 'index.html'));
 });
-
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {
   console.log('MongoDB Connected ✅');
