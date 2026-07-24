@@ -1,0 +1,187 @@
+/* ===========================
+   Filter Panel
+=========================== */
+
+.filter-panel{
+
+background:#ffffff;
+
+border-radius:20px;
+
+padding:24px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+display:flex;
+
+flex-direction:column;
+
+gap:22px;
+
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.filter-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding-bottom:16px;
+
+border-bottom:1px solid #e5e7eb;
+
+}
+
+.filter-header h2{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+font-size:22px;
+
+font-weight:700;
+
+color:#1f2937;
+
+margin:0;
+
+}
+
+.filter-header svg{
+
+color:#1747d1;
+
+}
+
+.filter-clear{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+padding:10px 16px;
+
+background:#eef2f7;
+
+border:none;
+
+border-radius:10px;
+
+font-size:14px;
+
+font-weight:600;
+
+color:#374151;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.filter-clear:hover{
+
+background:#1747d1;
+
+color:#ffffff;
+
+}
+
+/* ===========================
+   Filter Groups
+=========================== */
+
+.filter-group{
+
+display:flex;
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+.filter-group label{
+
+font-size:15px;
+
+font-weight:600;
+
+color:#374151;
+
+}
+
+.filter-group input,
+
+.filter-group select{
+
+width:100%;
+
+padding:13px 15px;
+
+border:1px solid #d1d5db;
+
+border-radius:12px;
+
+font-size:15px;
+
+outline:none;
+
+transition:.3s;
+
+background:#ffffff;
+
+}
+
+.filter-group input:focus,
+
+.filter-group select:focus{
+
+border-color:#1747d1;
+
+box-shadow:0 0 0 3px rgba(23,71,209,.12);
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+.filter-panel{
+
+padding:18px;
+
+}
+
+.filter-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:12px;
+
+}
+
+.filter-clear{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+}

@@ -1,0 +1,252 @@
+{
+  "info": {
+    "name": "ATS — New APIs Only (Extension)",
+    "description": "Postman collection for newly added APIs only. Existing APIs not included.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:5000" },
+    { "key": "admin_token", "value": "PASTE_ADMIN_JWT_TOKEN_HERE" },
+    { "key": "recruiter_token", "value": "PASTE_RECRUITER_JWT_TOKEN_HERE" },
+    { "key": "recruiter_id", "value": "PASTE_RECRUITER_ID_HERE" },
+    { "key": "candidate_id", "value": "PASTE_CANDIDATE_ID_HERE" },
+    { "key": "job_id", "value": "PASTE_JOB_ID_HERE" },
+    { "key": "application_id", "value": "PASTE_APPLICATION_ID_HERE" }
+  ],
+  "item": [
+    {
+      "name": "1. Admin — Recruiter Management",
+      "item": [
+        {
+          "name": "Create Recruiter",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/api/admin/recruiters",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Priya Sharma\",\n  \"email\": \"priya@ambider.com\",\n  \"password\": \"priya1234\",\n  \"phone\": \"9876500001\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Get All Recruiters",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/api/admin/recruiters",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" }
+            ]
+          }
+        },
+        {
+          "name": "Get Single Recruiter",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/api/admin/recruiters/{{recruiter_id}}",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" }
+            ]
+          }
+        },
+        {
+          "name": "Update Recruiter",
+          "request": {
+            "method": "PUT",
+            "url": "{{base_url}}/api/admin/recruiters/{{recruiter_id}}",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Priya Sharma Updated\",\n  \"phone\": \"9876500099\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Delete Recruiter",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base_url}}/api/admin/recruiters/{{recruiter_id}}",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" }
+            ]
+          }
+        },
+        {
+          "name": "Activate / Deactivate Recruiter",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base_url}}/api/admin/recruiters/{{recruiter_id}}/toggle-status",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" }
+            ]
+          }
+        },
+        {
+          "name": "Reset Recruiter Password",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base_url}}/api/admin/recruiters/{{recruiter_id}}/reset-password",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{admin_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"newPassword\": \"newSecurePass123\"\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Resume Matching Engine",
+      "item": [
+        {
+          "name": "Match Single Candidate to Job",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/api/matching/match",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{recruiter_token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"candidateId\": \"{{candidate_id}}\",\n  \"jobId\": \"{{job_id}}\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Match ALL Candidates for Job",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/api/matching/job/{{job_id}}/match-all",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{recruiter_token}}" }
+            ]
+          }
+        },
+        {
+          "name": "Get Ranked Candidates for Job",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/api/matching/job/{{job_id}}/ranking",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{recruiter_token}}" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. Dashboard (Updated)",
+      "item": [
+        {
+          "name": "Full Dashboard Stats",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/api/dashboard/stats",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{recruiter_token}}" }
+            ]
+          }
+        },
+        {
+          "name": "Recruiter Analytics (NEW)",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/api/dashboard/analytics",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{recruiter_token}}" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. Advanced Search",
+      "item": [
+        {
+          "name": "Search by Skill",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/search/candidates?skill=React",
+              "query": [{ "key": "skill", "value": "React" }]
+            },
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{recruiter_token}}" }
+            ]
+          }
+        },
+        {
+          "name": "Search by Name",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/search/candidates?name=John",
+              "query": [{ "key": "name", "value": "John" }]
+            },
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{recruiter_token}}" }
+            ]
+          }
+        },
+        {
+          "name": "Search by Experience + Skill",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/search/candidates?skill=Node.js&experience=2",
+              "query": [
+                { "key": "skill", "value": "Node.js" },
+                { "key": "experience", "value": "2" }
+              ]
+            },
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{recruiter_token}}" }
+            ]
+          }
+        },
+        {
+          "name": "Search with Match % Filter",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/search/candidates?minMatch=70&jobId={{job_id}}",
+              "query": [
+                { "key": "minMatch", "value": "70" },
+                { "key": "jobId", "value": "{{job_id}}" }
+              ]
+            },
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{recruiter_token}}" }
+            ]
+          }
+        },
+        {
+          "name": "Search with Pagination",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/search/candidates?page=1&limit=5",
+              "query": [
+                { "key": "page", "value": "1" },
+                { "key": "limit", "value": "5" }
+              ]
+            },
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{recruiter_token}}" }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

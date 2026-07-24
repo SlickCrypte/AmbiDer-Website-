@@ -1,0 +1,217 @@
+/* ==========================================
+   PAGINATION
+========================================== */
+
+.pagination{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:20px;
+
+margin-top:35px;
+
+flex-wrap:wrap;
+
+}
+
+/* ==========================================
+   PREVIOUS / NEXT BUTTON
+========================================== */
+
+.page-btn{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:12px 22px;
+
+border:none;
+
+border-radius:14px;
+
+background:#1747d1;
+
+color:#fff;
+
+font-size:15px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+box-shadow:0 12px 24px rgba(23,71,209,.15);
+
+}
+
+.page-btn:hover:not(:disabled){
+
+background:#1039b5;
+
+transform:translateY(-2px);
+
+box-shadow:0 18px 30px rgba(23,71,209,.22);
+
+}
+
+.page-btn:disabled{
+
+background:#d6dce9;
+
+color:#8b96aa;
+
+cursor:not-allowed;
+
+box-shadow:none;
+
+}
+
+/* ==========================================
+   PAGE NUMBERS
+========================================== */
+
+.page-numbers{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.page-number{
+
+width:46px;
+
+height:46px;
+
+border:none;
+
+border-radius:12px;
+
+background:#ffffff;
+
+border:1px solid #dfe7f6;
+
+color:#49566b;
+
+font-size:15px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+box-shadow:0 6px 16px rgba(0,0,0,.05);
+
+}
+
+.page-number:hover{
+
+background:#eef4ff;
+
+border-color:#1747d1;
+
+color:#1747d1;
+
+transform:translateY(-2px);
+
+}
+
+.page-number.active{
+
+background:#1747d1;
+
+color:#ffffff;
+
+border-color:#1747d1;
+
+box-shadow:0 12px 25px rgba(23,71,209,.25);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:768px){
+
+.pagination{
+
+flex-direction:column;
+
+gap:16px;
+
+}
+
+.page-btn{
+
+width:100%;
+
+max-width:220px;
+
+justify-content:center;
+
+}
+
+.page-numbers{
+
+gap:8px;
+
+}
+
+.page-number{
+
+width:42px;
+
+height:42px;
+
+font-size:14px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.pagination{
+
+margin-top:25px;
+
+}
+
+.page-btn{
+
+padding:12px 18px;
+
+font-size:14px;
+
+}
+
+.page-number{
+
+width:38px;
+
+height:38px;
+
+font-size:13px;
+
+border-radius:10px;
+
+}
+
+}

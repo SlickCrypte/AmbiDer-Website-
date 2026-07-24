@@ -1,0 +1,47 @@
+.custom-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:22px;
+
+box-shadow:0 15px 35px rgba(23,71,209,.08);
+
+transition:.3s;
+
+cursor:pointer;
+
+}
+
+.custom-card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.custom-card h3{
+
+font-size:22px;
+
+color:#555;
+
+margin-bottom:15px;
+
+}
+
+.custom-card h1{
+
+font-size:52px;
+
+color:#1747d1;
+
+margin-bottom:15px;
+
+}
+
+.custom-card p{
+
+color:#777;
+
+}

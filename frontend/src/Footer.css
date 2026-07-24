@@ -1,0 +1,76 @@
+.footer{
+
+margin-top:100px;
+
+padding:50px 80px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:white;
+
+border-top:
+1px solid #edf0f5;
+
+}
+
+.footer-left h2{
+
+font-size:34px;
+
+font-weight:800;
+
+/* AmbiDer Blue */
+background:
+linear-gradient(
+90deg,
+#1747d1,
+#4d7dff
+);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+margin-bottom:12px;
+
+}
+
+.footer-left p{
+
+color:#666;
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+.footer-right{
+
+display:flex;
+
+gap:42px;
+
+}
+
+.footer-right a{
+
+text-decoration:none;
+
+color:#555;
+
+font-size:18px;
+
+transition:.3s;
+
+}
+
+.footer-right a:hover{
+
+color:#1747d1;
+
+}

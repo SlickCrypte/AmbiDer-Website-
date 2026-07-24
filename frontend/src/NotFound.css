@@ -1,0 +1,297 @@
+/* ==========================================
+   NOT FOUND PAGE
+========================================== */
+
+.notfound-page{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:40px;
+
+background:linear-gradient(135deg,#f5f8ff,#edf4ff);
+
+}
+
+.notfound-card{
+
+width:100%;
+
+max-width:700px;
+
+background:#ffffff;
+
+padding:60px 40px;
+
+border-radius:28px;
+
+text-align:center;
+
+box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+border:1px solid #e7eefc;
+
+}
+
+.notfound-icon{
+
+width:100px;
+
+height:100px;
+
+margin:0 auto 30px;
+
+border-radius:50%;
+
+background:#eef4ff;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+.notfound-icon svg{
+
+font-size:42px;
+
+color:#1747d1;
+
+}
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.notfound-card h1{
+
+font-size:100px;
+
+font-weight:800;
+
+color:#1747d1;
+
+line-height:1;
+
+margin-bottom:10px;
+
+}
+
+.notfound-card h2{
+
+font-size:34px;
+
+font-weight:700;
+
+color:#1f2937;
+
+margin-bottom:18px;
+
+}
+
+.notfound-card p{
+
+font-size:17px;
+
+color:#6b7280;
+
+line-height:1.8;
+
+max-width:520px;
+
+margin:0 auto 40px;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.notfound-buttons{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+}
+
+.home-btn,
+
+.back-btn{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:10px;
+
+padding:14px 26px;
+
+border-radius:14px;
+
+font-size:15px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.home-btn{
+
+background:#1747d1;
+
+color:#fff;
+
+border:none;
+
+box-shadow:0 12px 25px rgba(23,71,209,.18);
+
+}
+
+.home-btn:hover{
+
+background:#1039b5;
+
+transform:translateY(-2px);
+
+}
+
+.back-btn{
+
+background:#fff;
+
+color:#1747d1;
+
+border:2px solid #1747d1;
+
+}
+
+.back-btn:hover{
+
+background:#eef4ff;
+
+transform:translateY(-2px);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:768px){
+
+.notfound-page{
+
+padding:20px;
+
+}
+
+.notfound-card{
+
+padding:45px 25px;
+
+}
+
+.notfound-card h1{
+
+font-size:72px;
+
+}
+
+.notfound-card h2{
+
+font-size:28px;
+
+}
+
+.notfound-card p{
+
+font-size:15px;
+
+margin-bottom:30px;
+
+}
+
+.notfound-buttons{
+
+flex-direction:column;
+
+gap:14px;
+
+}
+
+.home-btn,
+
+.back-btn{
+
+width:100%;
+
+max-width:260px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.notfound-card{
+
+padding:35px 20px;
+
+border-radius:20px;
+
+}
+
+.notfound-icon{
+
+width:80px;
+
+height:80px;
+
+}
+
+.notfound-icon svg{
+
+font-size:32px;
+
+}
+
+.notfound-card h1{
+
+font-size:60px;
+
+}
+
+.notfound-card h2{
+
+font-size:24px;
+
+}
+
+.notfound-card p{
+
+font-size:14px;
+
+line-height:1.7;
+
+}
+
+}

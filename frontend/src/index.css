@@ -1,0 +1,133 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,
+body,
+#root{
+
+width:100%;
+
+overflow-x:hidden;
+
+font-family:Arial;
+
+background:#f7f9fc;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.home,
+.jobs,
+.details,
+.dashboard,
+.notify{
+
+padding:28px !important;
+
+}
+
+.hero h1{
+
+font-size:42px !important;
+
+}
+
+.desc{
+
+font-size:18px !important;
+
+}
+
+.features{
+
+grid-template-columns:1fr !important;
+
+}
+
+.job-grid{
+
+grid-template-columns:1fr !important;
+
+}
+
+.cards{
+
+flex-direction:column !important;
+
+}
+
+.info{
+
+flex-direction:column !important;
+
+gap:18px !important;
+
+}
+
+.top{
+
+flex-direction:column !important;
+
+gap:20px;
+
+}
+
+.top h1{
+
+font-size:34px !important;
+
+}
+
+.notify-header h1,
+.jobs-header h1,
+.header h1{
+
+font-size:40px !important;
+
+}
+
+.footer{
+
+flex-direction:column !important;
+
+align-items:flex-start !important;
+
+gap:30px;
+
+padding:40px !important;
+
+}
+
+.footer-right{
+
+flex-wrap:wrap;
+
+gap:20px !important;
+
+}
+
+.job-card button{
+
+width:100% !important;
+
+}
+
+.section{
+
+padding:28px !important;
+
+}
+
+img{
+
+max-width:100%;
+
+}
+
+}

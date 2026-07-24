@@ -1,0 +1,1420 @@
+/* ==========================================
+   Candidate Profile - AmbiDer ATS
+========================================== */
+
+.profile-page{
+
+display:grid;
+
+grid-template-columns:340px 1fr;
+
+gap:30px;
+
+padding:35px;
+
+background:#f4f7fc;
+
+min-height:100vh;
+
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.profile-left{
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+.profile-card{
+
+background:#ffffff;
+
+border-radius:24px;
+
+padding:32px 28px;
+
+text-align:center;
+
+box-shadow:0 12px 35px rgba(15,23,42,.07);
+
+}
+
+.profile-image{
+
+width:120px;
+
+height:120px;
+
+margin:auto;
+
+margin-bottom:20px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:linear-gradient(135deg,#eef4ff,#dce8ff);
+
+}
+
+.profile-image svg{
+
+font-size:72px;
+
+color:#1747d1;
+
+}
+
+.profile-card h2{
+
+font-size:28px;
+
+font-weight:700;
+
+color:#1f2937;
+
+margin-bottom:6px;
+
+}
+
+.profile-role{
+
+font-size:16px;
+
+color:#6b7280;
+
+margin-bottom:18px;
+
+}
+
+/* =========================
+   Available Badge
+========================= */
+
+.available-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:8px;
+
+padding:10px 18px;
+
+background:#e9f8ef;
+
+color:#0f8a42;
+
+font-weight:600;
+
+font-size:14px;
+
+border-radius:30px;
+
+margin-bottom:22px;
+
+}
+
+.available-badge svg{
+
+font-size:15px;
+
+}
+
+/* =========================
+   Rating
+========================= */
+
+.profile-rating{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:4px;
+
+margin-bottom:24px;
+
+}
+
+.profile-rating svg{
+
+font-size:17px;
+
+color:#ffb400;
+
+}
+
+.profile-rating span{
+
+margin-left:8px;
+
+font-size:14px;
+
+font-weight:600;
+
+color:#4b5563;
+
+}
+
+/* =========================
+   Progress
+========================= */
+
+.profile-progress{
+
+margin-bottom:24px;
+
+}
+
+.progress-text{
+
+display:flex;
+
+justify-content:space-between;
+
+font-size:14px;
+
+font-weight:600;
+
+margin-bottom:10px;
+
+color:#374151;
+
+}
+
+.progress-bar{
+
+width:100%;
+
+height:10px;
+
+background:#e5eaf5;
+
+border-radius:50px;
+
+overflow:hidden;
+
+}
+
+.progress-fill{
+
+height:100%;
+
+background:linear-gradient(90deg,#1747d1,#3b82f6);
+
+border-radius:50px;
+
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.profile-actions{
+
+display:flex;
+
+flex-direction:column;
+
+gap:14px;
+
+margin-top:28px;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+height:48px;
+
+border:none;
+
+border-radius:12px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:10px;
+
+font-size:15px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.primary-btn{
+
+background:#1747d1;
+
+color:#ffffff;
+
+}
+
+.primary-btn:hover{
+
+background:#0f38b6;
+
+transform:translateY(-2px);
+
+}
+
+.secondary-btn{
+
+background:#eef4ff;
+
+color:#1747d1;
+
+}
+
+.secondary-btn:hover{
+
+background:#dbe7ff;
+
+transform:translateY(-2px);
+
+}
+
+/* ==========================================
+   Stats Card
+========================================== */
+
+.stats-card{
+
+background:#ffffff;
+
+border-radius:24px;
+
+padding:24px;
+
+box-shadow:0 12px 35px rgba(15,23,42,.07);
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+.mini-stat{
+
+display:flex;
+
+align-items:center;
+
+gap:16px;
+
+padding:14px;
+
+border-radius:16px;
+
+background:#f8fbff;
+
+transition:.3s;
+
+}
+
+.mini-stat:hover{
+
+background:#eef4ff;
+
+transform:translateX(5px);
+
+}
+
+.mini-stat svg{
+
+font-size:22px;
+
+color:#1747d1;
+
+width:24px;
+
+flex-shrink:0;
+
+}
+
+.mini-stat h4{
+
+font-size:22px;
+
+font-weight:700;
+
+color:#1f2937;
+
+margin-bottom:4px;
+
+}
+
+.mini-stat span{
+
+font-size:13px;
+
+color:#6b7280;
+
+}
+
+/* ==========================================
+   Contact Card
+========================================== */
+
+.contact-card{
+
+background:#ffffff;
+
+border-radius:24px;
+
+padding:28px;
+
+box-shadow:0 12px 35px rgba(15,23,42,.07);
+
+}
+
+.contact-card h3{
+
+font-size:22px;
+
+font-weight:700;
+
+color:#1f2937;
+
+margin-bottom:24px;
+
+}
+
+/* ==========================================
+   Contact Item
+========================================== */
+
+.contact-item{
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+padding:15px 0;
+
+border-bottom:1px solid #edf1f7;
+
+}
+
+.contact-item:last-child{
+
+border-bottom:none;
+
+}
+
+.contact-item>svg{
+
+font-size:18px;
+
+color:#1747d1;
+
+width:20px;
+
+flex-shrink:0;
+
+}
+
+.contact-item span{
+
+font-size:15px;
+
+color:#4b5563;
+
+}
+
+.contact-item a{
+
+font-size:14px;
+
+font-weight:600;
+
+color:#1747d1;
+
+text-decoration:none;
+
+transition:.25s;
+
+word-break:break-word;
+
+}
+
+.contact-item a:hover{
+
+text-decoration:underline;
+
+}
+
+/* ==========================================
+   Copy + External Buttons
+========================================== */
+
+.contact-actions{
+
+margin-left:auto;
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+}
+
+.contact-actions button,
+
+.contact-actions a{
+
+width:34px;
+
+height:34px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border:none;
+
+outline:none;
+
+cursor:pointer;
+
+border-radius:10px;
+
+background:#eef4ff;
+
+color:#1747d1;
+
+transition:.25s;
+
+}
+
+.contact-actions button:hover,
+
+.contact-actions a:hover{
+
+background:#1747d1;
+
+color:#ffffff;
+
+transform:scale(1.08);
+
+}
+
+/* ==========================================
+   Right Side
+========================================== */
+
+.profile-right{
+
+display:flex;
+
+flex-direction:column;
+
+gap:24px;
+
+}
+
+.content-card{
+
+background:#ffffff;
+
+border-radius:24px;
+
+padding:30px;
+
+box-shadow:0 12px 35px rgba(15,23,42,.07);
+
+transition:.3s;
+
+}
+
+.content-card:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 20px 45px rgba(23,71,209,.08);
+
+}
+
+/* ==========================================
+   Section Heading
+========================================== */
+
+.section-heading{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+margin-bottom:22px;
+
+}
+
+.section-heading svg{
+
+font-size:20px;
+
+color:#1747d1;
+
+}
+
+.section-heading h2{
+
+font-size:24px;
+
+font-weight:700;
+
+color:#1f2937;
+
+}
+
+/* ==========================================
+   About
+========================================== */
+
+.about-text{
+
+font-size:15px;
+
+line-height:1.9;
+
+color:#5f6b7a;
+
+margin-bottom:28px;
+
+}
+
+/* ==========================================
+   Highlights
+========================================== */
+
+.profile-highlights{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:18px;
+
+}
+
+.highlight-box{
+
+background:#f8fbff;
+
+border:1px solid #e5edf8;
+
+border-radius:18px;
+
+padding:18px;
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+.highlight-box:hover{
+
+background:#1747d1;
+
+transform:translateY(-4px);
+
+}
+
+.highlight-box h4{
+
+font-size:15px;
+
+font-weight:600;
+
+color:#6b7280;
+
+margin-bottom:10px;
+
+transition:.3s;
+
+}
+
+.highlight-box span{
+
+font-size:22px;
+
+font-weight:700;
+
+color:#1747d1;
+
+transition:.3s;
+
+}
+
+.highlight-box:hover h4,
+
+.highlight-box:hover span{
+
+color:#ffffff;
+
+}
+
+/* ==========================================
+   Skills
+========================================== */
+
+.skills-grid{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:14px;
+
+}
+
+.skill-chip{
+
+padding:12px 18px;
+
+border-radius:30px;
+
+background:#eef4ff;
+
+color:#1747d1;
+
+font-size:14px;
+
+font-weight:600;
+
+transition:.3s;
+
+cursor:default;
+
+}
+
+.skill-chip:hover{
+
+background:#1747d1;
+
+color:#ffffff;
+
+transform:translateY(-3px);
+
+box-shadow:0 10px 20px rgba(23,71,209,.18);
+
+}
+
+/* ==========================================
+   Timeline
+========================================== */
+
+.timeline-card{
+
+margin-top:20px;
+
+padding:24px;
+
+border-radius:20px;
+
+border:1px solid #e8edf6;
+
+background:#fafcff;
+
+transition:.3s;
+
+}
+
+.timeline-card:hover{
+
+border-color:#1747d1;
+
+transform:translateY(-4px);
+
+box-shadow:0 16px 35px rgba(23,71,209,.08);
+
+}
+
+.timeline-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:10px;
+
+gap:15px;
+
+}
+
+.timeline-header h3{
+
+font-size:21px;
+
+font-weight:700;
+
+color:#1f2937;
+
+}
+
+.timeline-badge{
+
+padding:8px 14px;
+
+border-radius:20px;
+
+background:#e9f8ef;
+
+color:#0f8a42;
+
+font-size:13px;
+
+font-weight:700;
+
+white-space:nowrap;
+
+}
+
+.timeline-card h4{
+
+font-size:16px;
+
+font-weight:600;
+
+color:#1747d1;
+
+margin-bottom:6px;
+
+}
+
+.timeline-date{
+
+font-size:14px;
+
+color:#6b7280;
+
+margin-bottom:18px;
+
+}
+
+.timeline-list{
+
+padding-left:20px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+.timeline-list li{
+
+font-size:15px;
+
+line-height:1.7;
+
+color:#4b5563;
+
+}
+
+/* ==========================================
+   Projects
+========================================== */
+
+.project-card{
+
+margin-top:24px;
+
+padding:24px;
+
+border-radius:20px;
+
+border:1px solid #e8edf6;
+
+background:#fbfcff;
+
+transition:.3s;
+
+}
+
+.project-card:hover{
+
+border-color:#1747d1;
+
+transform:translateY(-4px);
+
+box-shadow:0 16px 35px rgba(23,71,209,.08);
+
+}
+
+.project-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:18px;
+
+margin-bottom:14px;
+
+}
+
+.project-header h3{
+
+font-size:20px;
+
+font-weight:700;
+
+color:#1f2937;
+
+}
+
+.project-header span{
+
+padding:8px 14px;
+
+border-radius:20px;
+
+background:#eef4ff;
+
+color:#1747d1;
+
+font-size:13px;
+
+font-weight:700;
+
+white-space:nowrap;
+
+}
+
+.project-card p{
+
+font-size:15px;
+
+line-height:1.8;
+
+color:#5f6b7a;
+
+margin-bottom:18px;
+
+}
+
+/* ==========================================
+   Project Tags
+========================================== */
+
+.project-tags{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:10px;
+
+margin-bottom:22px;
+
+}
+
+.project-tags span{
+
+padding:9px 15px;
+
+border-radius:30px;
+
+background:#eef4ff;
+
+color:#1747d1;
+
+font-size:13px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.project-tags span:hover{
+
+background:#1747d1;
+
+color:#ffffff;
+
+}
+
+/* ==========================================
+   Project Buttons
+========================================== */
+
+.project-buttons{
+
+display:flex;
+
+gap:14px;
+
+}
+
+.project-buttons button{
+
+height:44px;
+
+padding:0 22px;
+
+border:none;
+
+border-radius:12px;
+
+background:#1747d1;
+
+color:#ffffff;
+
+font-size:14px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.project-buttons button:hover{
+
+background:#0f38b6;
+
+transform:translateY(-2px);
+
+box-shadow:0 12px 25px rgba(23,71,209,.22);
+
+}
+
+/* ==========================================
+   Certifications
+========================================== */
+
+.certificate-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:18px;
+
+margin-top:20px;
+
+}
+
+.certificate-card{
+
+display:flex;
+
+align-items:center;
+
+gap:16px;
+
+padding:20px;
+
+border-radius:18px;
+
+background:#f8fbff;
+
+border:1px solid #e6edf8;
+
+transition:.3s;
+
+}
+
+.certificate-card:hover{
+
+background:#1747d1;
+
+border-color:#1747d1;
+
+transform:translateY(-4px);
+
+box-shadow:0 15px 35px rgba(23,71,209,.15);
+
+}
+
+.certificate-card svg{
+
+font-size:26px;
+
+color:#1747d1;
+
+transition:.3s;
+
+flex-shrink:0;
+
+}
+
+.certificate-card h4{
+
+font-size:16px;
+
+font-weight:700;
+
+color:#1f2937;
+
+margin-bottom:4px;
+
+transition:.3s;
+
+}
+
+.certificate-card p{
+
+font-size:13px;
+
+color:#6b7280;
+
+transition:.3s;
+
+}
+
+.certificate-card:hover svg,
+.certificate-card:hover h4,
+.certificate-card:hover p{
+
+color:#ffffff;
+
+}
+
+/* ==========================================
+   Additional Information
+========================================== */
+
+.extra-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:18px;
+
+margin-top:20px;
+
+}
+
+.extra-card{
+
+padding:22px;
+
+border-radius:18px;
+
+background:#f8fbff;
+
+border:1px solid #e5edf8;
+
+transition:.3s;
+
+}
+
+.extra-card:hover{
+
+background:#1747d1;
+
+transform:translateY(-4px);
+
+}
+
+.extra-card h4{
+
+font-size:16px;
+
+font-weight:700;
+
+margin-bottom:10px;
+
+color:#1f2937;
+
+transition:.3s;
+
+}
+
+.extra-card p{
+
+font-size:15px;
+
+color:#6b7280;
+
+transition:.3s;
+
+}
+
+.extra-card:hover h4,
+.extra-card:hover p{
+
+color:#ffffff;
+
+}
+
+.available-text{
+
+font-weight:700;
+
+color:#16a34a !important;
+
+}
+
+/* ==========================================
+   Career Insights
+========================================== */
+
+.insight-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:18px;
+
+margin-top:20px;
+
+}
+
+.insight-card{
+
+padding:24px;
+
+text-align:center;
+
+border-radius:18px;
+
+background:#f8fbff;
+
+border:1px solid #e5edf8;
+
+transition:.3s;
+
+}
+
+.insight-card:hover{
+
+background:#1747d1;
+
+transform:translateY(-5px);
+
+box-shadow:0 16px 35px rgba(23,71,209,.18);
+
+}
+
+.insight-card h3{
+
+font-size:32px;
+
+font-weight:700;
+
+color:#1747d1;
+
+margin-bottom:10px;
+
+transition:.3s;
+
+}
+
+.insight-card p{
+
+font-size:14px;
+
+color:#6b7280;
+
+transition:.3s;
+
+line-height:1.6;
+
+}
+
+.insight-card:hover h3,
+.insight-card:hover p{
+
+color:#ffffff;
+
+}
+
+/* ==========================================
+   Footer
+========================================== */
+
+.last-updated{
+
+margin-top:20px;
+
+text-align:right;
+
+font-size:14px;
+
+color:#6b7280;
+
+}
+
+.last-updated strong{
+
+color:#1747d1;
+
+margin-left:6px;
+
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:1200px){
+
+.profile-page{
+
+grid-template-columns:1fr;
+
+}
+
+.profile-highlights{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.insight-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.profile-page{
+
+padding:20px;
+
+gap:20px;
+
+}
+
+.profile-card,
+.stats-card,
+.contact-card,
+.content-card{
+
+padding:22px;
+
+}
+
+.profile-image{
+
+width:100px;
+
+height:100px;
+
+}
+
+.profile-image svg{
+
+font-size:60px;
+
+}
+
+.profile-card h2{
+
+font-size:24px;
+
+}
+
+.section-heading h2{
+
+font-size:22px;
+
+}
+
+.profile-highlights{
+
+grid-template-columns:1fr;
+
+}
+
+.extra-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.insight-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.certificate-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.timeline-header,
+.project-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.project-buttons{
+
+flex-direction:column;
+
+}
+
+.project-buttons button{
+
+width:100%;
+
+}
+
+.contact-item{
+
+flex-wrap:wrap;
+
+}
+
+.contact-actions{
+
+margin-left:0;
+
+margin-top:10px;
+
+}
+
+}

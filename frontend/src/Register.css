@@ -1,0 +1,156 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial;
+background:#f5f8ff;
+}
+
+.register-page{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:40px;
+
+}
+
+.register-box{
+
+width:560px;
+
+background:white;
+
+padding:55px;
+
+border-radius:30px;
+
+border:2px solid #e5ebfb;
+
+box-shadow:0 20px 45px rgba(23,71,209,.10);
+
+}
+
+.register-box h1{
+
+font-size:42px;
+
+margin-bottom:10px;
+
+color:#111;
+
+}
+
+.register-box p{
+
+color:#667085;
+
+margin-bottom:30px;
+
+font-size:16px;
+
+}
+
+.register-box input,
+.register-box select{
+
+width:100%;
+
+padding:18px;
+
+margin-bottom:18px;
+
+border-radius:15px;
+
+border:2px solid #d9dfeb;
+
+background:#fafcff;
+
+font-size:15px;
+
+transition:.25s;
+
+}
+
+.register-box input:focus,
+.register-box select:focus{
+
+outline:none;
+
+border-color:#1747d1;
+
+box-shadow:0 0 0 5px rgba(23,71,209,.10);
+
+background:white;
+
+}
+
+.register-box button{
+
+width:100%;
+
+padding:18px;
+
+background:#1747d1;
+
+color:white;
+
+font-size:17px;
+
+font-weight:700;
+
+border:none;
+
+border-radius:16px;
+
+cursor:pointer;
+
+transition:.3s;
+
+margin-top:8px;
+
+}
+
+.register-box button:hover{
+
+background:#123bb0;
+
+transform:translateY(-2px);
+
+}
+
+.login-link{
+
+margin-top:22px;
+
+text-align:center;
+
+color:#666;
+
+font-size:15px;
+
+}
+
+.login-link span{
+
+color:#1747d1;
+
+font-weight:700;
+
+cursor:pointer;
+
+}
+
+.login-link span:hover{
+
+text-decoration:underline;
+
+}

@@ -1,0 +1,296 @@
+.applicants-page{
+    padding:30px;
+    background:#f5f7fb;
+    min-height:100vh;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.applicants-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.applicants-header h1{
+    font-size:32px;
+    color:#1f2937;
+    margin-bottom:8px;
+}
+
+.applicants-header p{
+    color:#6b7280;
+    font-size:16px;
+}
+
+.applicant-count{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#2563eb;
+    color:white;
+    padding:14px 22px;
+    border-radius:12px;
+    font-weight:600;
+    box-shadow:0 6px 18px rgba(37,99,235,.25);
+}
+
+/* ===========================
+   Toolbar
+=========================== */
+
+.applicants-toolbar{
+    margin-bottom:30px;
+}
+
+.applicants-search{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#fff;
+    border-radius:12px;
+    padding:14px 18px;
+    box-shadow:0 5px 18px rgba(0,0,0,.06);
+}
+
+.applicants-search svg{
+    color:#2563eb;
+    font-size:18px;
+}
+
+.applicants-search input{
+    width:100%;
+    border:none;
+    outline:none;
+    font-size:15px;
+    background:transparent;
+}
+
+/* ===========================
+   Empty State
+=========================== */
+
+.empty-applicants{
+    background:white;
+    border-radius:16px;
+    padding:80px 30px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.empty-icon{
+    font-size:70px;
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.empty-applicants h2{
+    color:#1f2937;
+    margin-bottom:12px;
+}
+
+.empty-applicants p{
+    color:#6b7280;
+}
+
+/* ===========================
+   Applicants List
+=========================== */
+
+.applicants-list{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.applicant-card{
+    background:white;
+    border-radius:16px;
+    padding:24px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.applicant-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 14px 30px rgba(0,0,0,.10);
+}
+
+/* ===========================
+   Left Section
+=========================== */
+
+.applicant-left{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.avatar{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#2563eb;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    font-weight:700;
+}
+
+.applicant-left h2{
+    font-size:21px;
+    color:#1f2937;
+    margin-bottom:6px;
+}
+
+.applicant-left p{
+    color:#6b7280;
+    margin-bottom:5px;
+}
+
+.applicant-left span{
+    color:#9ca3af;
+    font-size:14px;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.applicant-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    justify-content:flex-end;
+}
+
+.applicant-actions button{
+    border:none;
+    border-radius:10px;
+    padding:12px 18px;
+    cursor:pointer;
+    color:white;
+    font-size:14px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    transition:.3s;
+}
+
+.applicant-actions button:hover{
+    transform:translateY(-2px);
+}
+
+.resume-btn{
+    background:#6366f1;
+}
+
+.resume-btn:hover{
+    background:#4f46e5;
+}
+
+.shortlist-btn{
+    background:#10b981;
+}
+
+.shortlist-btn:hover{
+    background:#059669;
+}
+
+.interview-btn{
+    background:#f59e0b;
+}
+
+.interview-btn:hover{
+    background:#d97706;
+}
+
+.reject-btn{
+    background:#ef4444;
+}
+
+.reject-btn:hover{
+    background:#dc2626;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:992px){
+
+    .applicant-card{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .applicant-actions{
+        width:100%;
+        justify-content:flex-start;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .applicants-page{
+        padding:20px;
+    }
+
+    .applicants-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .applicants-header h1{
+        font-size:28px;
+    }
+
+    .applicant-count{
+        width:100%;
+        justify-content:center;
+    }
+
+    .applicant-actions{
+        flex-direction:column;
+    }
+
+    .applicant-actions button{
+        width:100%;
+        justify-content:center;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .applicants-page{
+        padding:15px;
+    }
+
+    .applicant-card{
+        padding:18px;
+    }
+
+    .avatar{
+        width:55px;
+        height:55px;
+        font-size:20px;
+    }
+
+    .applicant-left h2{
+        font-size:18px;
+    }
+
+}

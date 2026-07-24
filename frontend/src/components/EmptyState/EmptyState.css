@@ -1,0 +1,271 @@
+/* =====================================
+   EMPTY STATE
+===================================== */
+
+.empty-state{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+padding:60px 30px;
+
+background:#ffffff;
+
+border:1px solid #e9eef8;
+
+border-radius:22px;
+
+box-shadow:0 12px 30px rgba(15,23,42,.05);
+
+transition:.3s;
+
+}
+
+.empty-state:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 18px 38px rgba(23,71,209,.08);
+
+}
+
+/* =====================================
+   ICON
+===================================== */
+
+.empty-icon{
+
+width:90px;
+
+height:90px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:linear-gradient(135deg,#1747d1,#3d7cff);
+
+color:#ffffff;
+
+font-size:36px;
+
+margin-bottom:24px;
+
+box-shadow:0 15px 35px rgba(23,71,209,.25);
+
+}
+
+/* =====================================
+   TITLE
+===================================== */
+
+.empty-state h2{
+
+font-size:28px;
+
+font-weight:700;
+
+color:#1b2430;
+
+margin-bottom:12px;
+
+}
+
+/* =====================================
+   DESCRIPTION
+===================================== */
+
+.empty-state p{
+
+max-width:500px;
+
+font-size:15px;
+
+line-height:1.8;
+
+color:#7a8597;
+
+margin-bottom:28px;
+
+}
+
+/* =====================================
+   BUTTON
+===================================== */
+
+.empty-btn{
+
+padding:14px 30px;
+
+border:none;
+
+border-radius:14px;
+
+background:linear-gradient(135deg,#1747d1,#3d7cff);
+
+color:#fff;
+
+font-size:15px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:all .3s ease;
+
+box-shadow:0 12px 24px rgba(23,71,209,.18);
+
+}
+
+.empty-btn:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 18px 34px rgba(23,71,209,.25);
+
+}
+
+.empty-btn:active{
+
+transform:scale(.98);
+
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 992px){
+
+.empty-state{
+
+padding:50px 24px;
+
+}
+
+.empty-icon{
+
+width:80px;
+
+height:80px;
+
+font-size:32px;
+
+}
+
+.empty-state h2{
+
+font-size:24px;
+
+}
+
+.empty-state p{
+
+font-size:14px;
+
+max-width:420px;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.empty-state{
+
+padding:40px 20px;
+
+border-radius:18px;
+
+}
+
+.empty-icon{
+
+width:72px;
+
+height:72px;
+
+font-size:28px;
+
+margin-bottom:20px;
+
+}
+
+.empty-state h2{
+
+font-size:22px;
+
+}
+
+.empty-state p{
+
+font-size:14px;
+
+line-height:1.7;
+
+margin-bottom:24px;
+
+}
+
+.empty-btn{
+
+width:100%;
+
+max-width:260px;
+
+padding:13px 20px;
+
+}
+
+}
+
+@media (max-width:480px){
+
+.empty-state{
+
+padding:35px 16px;
+
+}
+
+.empty-icon{
+
+width:64px;
+
+height:64px;
+
+font-size:24px;
+
+}
+
+.empty-state h2{
+
+font-size:20px;
+
+}
+
+.empty-state p{
+
+font-size:13px;
+
+}
+
+.empty-btn{
+
+font-size:14px;
+
+padding:12px 18px;
+
+}
+
+}

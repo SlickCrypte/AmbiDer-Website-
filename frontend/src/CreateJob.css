@@ -1,0 +1,225 @@
+.create-job-page {
+  padding: 30px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.create-job-header {
+  margin-bottom: 30px;
+}
+
+.create-job-header h1 {
+  font-size: 32px;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.create-job-header p {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.create-job-form {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.create-job-form input,
+.create-job-form select,
+.create-job-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.create-job-form input:focus,
+.create-job-form select:focus,
+.create-job-form textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.create-job-form textarea {
+  min-height: 130px;
+  resize: vertical;
+  grid-column: 1 / -1;
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+.create-job-form input::placeholder,
+.create-job-form textarea::placeholder {
+  color: #9ca3af;
+}
+
+.create-job-form select {
+  cursor: pointer;
+}
+
+.create-job-form input[type="date"] {
+  color: #4b5563;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.button-group {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.button-group button {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cancel-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #dc2626;
+}
+
+.draft-btn {
+  background: #f59e0b;
+  color: white;
+}
+
+.draft-btn:hover {
+  background: #d97706;
+}
+
+.publish-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.publish-btn:hover {
+  background: #1d4ed8;
+}
+
+.button-group button:active {
+  transform: scale(0.97);
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+.create-job-form textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.create-job-form textarea::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 20px;
+}
+
+.create-job-form textarea::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+
+  .create-job-page {
+    padding: 20px;
+  }
+
+  .create-job-form {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
+  .create-job-form textarea {
+    grid-column: auto;
+  }
+
+  .button-group {
+    justify-content: stretch;
+  }
+
+  .button-group button {
+    flex: 1;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .create-job-header h1 {
+    font-size: 28px;
+  }
+
+  .create-job-header p {
+    font-size: 14px;
+  }
+
+  .create-job-form {
+    padding: 18px;
+    gap: 16px;
+  }
+
+  .create-job-form input,
+  .create-job-form select,
+  .create-job-form textarea {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button-group button {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .create-job-page {
+    padding: 15px;
+  }
+
+  .create-job-header h1 {
+    font-size: 24px;
+  }
+
+  .create-job-header p {
+    font-size: 13px;
+  }
+
+  .create-job-form {
+    border-radius: 12px;
+    padding: 15px;
+  }
+
+}

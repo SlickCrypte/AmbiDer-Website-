@@ -1,0 +1,231 @@
+/* ===========================
+   Confirm Dialog Overlay
+=========================== */
+
+.confirm-overlay{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(15,23,42,.45);
+
+backdrop-filter:blur(5px);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+animation:fadeIn .25s ease;
+
+}
+
+/* ===========================
+   Dialog Box
+=========================== */
+
+.confirm-dialog{
+
+width:420px;
+
+max-width:90%;
+
+background:#ffffff;
+
+border-radius:20px;
+
+padding:32px;
+
+text-align:center;
+
+box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+animation:popup .25s ease;
+
+}
+
+.confirm-icon{
+
+width:72px;
+
+height:72px;
+
+margin:0 auto 18px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:34px;
+
+background:#fff4e5;
+
+border-radius:50%;
+
+}
+
+.confirm-dialog h2{
+
+font-size:28px;
+
+font-weight:700;
+
+color:#1f2937;
+
+margin-bottom:12px;
+
+}
+
+.confirm-dialog p{
+
+font-size:15px;
+
+line-height:1.7;
+
+color:#6b7280;
+
+margin-bottom:28px;
+
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.confirm-actions{
+
+display:flex;
+
+gap:16px;
+
+justify-content:center;
+
+}
+
+.confirm-actions button{
+
+flex:1;
+
+padding:14px;
+
+border:none;
+
+border-radius:12px;
+
+font-size:15px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.confirm-cancel{
+
+background:#eef2f7;
+
+color:#374151;
+
+}
+
+.confirm-cancel:hover{
+
+background:#dbe4ef;
+
+}
+
+.confirm-confirm{
+
+background:#1747d1;
+
+color:#ffffff;
+
+}
+
+.confirm-confirm:hover{
+
+background:#123ab1;
+
+transform:translateY(-2px);
+
+}
+
+/* ===========================
+   Animations
+=========================== */
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+@keyframes popup{
+
+from{
+
+transform:scale(.9);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+.confirm-dialog{
+
+padding:24px;
+
+}
+
+.confirm-dialog h2{
+
+font-size:24px;
+
+}
+
+.confirm-actions{
+
+flex-direction:column;
+
+}
+
+}
