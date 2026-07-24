@@ -5,12 +5,25 @@ export const getDashboardStats = async () => {
   return response.data;
 };
 
+// Temporary dummy data
 export const getRecentActivities = async () => {
-  const response = await API.get("/dashboard/recent-activities");
-  return response.data;
+  return [
+    {
+      title: "Application Submitted",
+      company: "AmbiDer Technologies",
+      status: "Applied",
+      date: "Today",
+    },
+  ];
 };
 
 export const getUpcomingInterviews = async () => {
-  const response = await API.get("/dashboard/upcoming-interviews");
-  return response.data;
+  return [
+    {
+      company: "No Interviews Scheduled",
+      role: "-",
+      date: "-",
+      time: "-",
+    },
+  ];
 };
