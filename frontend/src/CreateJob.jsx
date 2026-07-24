@@ -33,9 +33,8 @@ function CreateJob() {
 
   try {
     const token = localStorage.getItem("token");
-
-    await axios.post(
-      "http://localhost:5000/api/jobs",
+await axios.post(
+  "/api/jobs",
       {
         title: formData.title,
         description: formData.description,

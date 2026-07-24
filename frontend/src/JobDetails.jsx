@@ -51,7 +51,7 @@ function JobDetails() {
       localStorage.getItem("token");
 
     const response = await fetch(
-      `http://localhost:5000/api/candidates/${candidateId}`,
+      `/api/candidates/${candidateId}`,
       {
         headers: {
           Authorization: `Bearer ${token}`
